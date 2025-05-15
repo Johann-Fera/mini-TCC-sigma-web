@@ -55,3 +55,56 @@ footer{
     background-position: center;
     background-position-y: 55%;
 }
+#footerdiv{
+    background-image: url(/front/css/Fotos/rodapé.png);
+    display: flex;
+    font-family: "Inknut Antiqua", serif;
+    flex-direction: column; /* Empilha o conteúdo */
+    font-weight: 400;
+    font-style: normal;
+    color: #F9D5A8;
+    width: 100%;
+    padding: 3rem 3.5rem;
+    background-size: cover;
+    position: relative;
+    margin: 0;
+    
+}
+.icones{
+    width: 50px;
+    height: 50px;
+}
+#icones-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    gap: 10px; /* Espaçamento entre os ícones (opcional) */
+    width: 100%;
+    margin-top: 2rem;
+    padding-top: 1rem;
+}
+#localiza-contato-horario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    width: 100%;
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+#jacinto_logo{
+    width: 210px;
+    height: 210px;
+}
+#jacintodiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    width: 100%;
+    margin: 0;
+}
