@@ -31,7 +31,8 @@ table{
 }
 .true-main{
     background-image: url(/front/css/Fotos/fundo.png);
-    height: 100px;
+    background-repeat: repeat-y;
+    background-size: cover;
 }
 footer{
     background-image: url(/front/css/Fotos/rodapé.png);
@@ -40,4 +41,10 @@ footer{
     font-weight: 400;
     font-style: normal;
     color: #F9D5A8;
+}
+.painel{
+    height: 30%;
+    width: 100%; 
+    display: flex;
+    max-width: 100%;
 }
