@@ -15,9 +15,14 @@ table{
 }
 .true-main{
     background-image: url(/front/css/Fotos/fundo.png);
-    height: 100px;
 }
 footer{
     background-image: url(/front/css/Fotos/rodapé.png);
     display: grid;
+}
+.painel{
+    height: 50px;
+    width: 50px; 
+    display: flex;
+    max-width: 100%;
 }
