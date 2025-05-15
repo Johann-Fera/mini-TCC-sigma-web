@@ -20,6 +20,11 @@ header{
     0px -3px 0 #000,
     0px 3px 0 #000;
 }
+a{
+    color: #DEB168;
+    text-decoration: none;
+
+}
 .header-list{
     color: #DEB168;
     display: grid;
