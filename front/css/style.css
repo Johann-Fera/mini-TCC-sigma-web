@@ -1,8 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
 body{
     margin: 0;
 }
 header{
     background-color: #2D1B0C;
+    position: sticky;
+    top: 0;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow:
+    -2px -2px 0 #000,
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000,
+    -3px 0px 0 #000,
+    3px 0px 0 #000,
+    0px -3px 0 #000,
+    0px 3px 0 #000;
 }
 .header-list{
     color: #DEB168;
@@ -15,14 +31,20 @@ table{
 }
 .true-main{
     background-image: url(/front/css/Fotos/fundo.png);
+    height: 100px;
 }
 footer{
     background-image: url(/front/css/Fotos/rodapé.png);
     display: grid;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #F9D5A8;
 }
+
 .painel{
-    height: 50px;
-    width: 50px; 
+    height: 30%;
+    width: 100%; 
     display: flex;
     max-width: 100%;
 }
