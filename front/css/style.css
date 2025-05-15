@@ -43,8 +43,12 @@ footer{
     color: #F9D5A8;
 }
 .painel{
-    height: 30%;
+    background-image: url(/front/css/Fotos/carneheader.png);
+    height: 500px;
     width: 100%; 
     display: flex;
-    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    background-position: center;
 }
