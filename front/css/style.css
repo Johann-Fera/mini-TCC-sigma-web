@@ -29,11 +29,13 @@ table{
     border-color:black;
     border-spacing: 0;
 }
+main{
+    display: grid;
+}
 .true-main{
     background-image: url(/front/css/Fotos/fundo.png);
     background-repeat: repeat-y;
     background-size: cover;
-    display: flex;
 }
 footer{
     background-image: url(/front/css/Fotos/rodapé.png);
