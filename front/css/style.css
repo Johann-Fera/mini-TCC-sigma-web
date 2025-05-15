@@ -1,0 +1,23 @@
+body{
+    margin: 0;
+}
+header{
+    background-color: #2D1B0C;
+}
+.header-list{
+    color: #DEB168;
+    display: grid;
+    background-image: url(/front/css/Fotos/fogo.png);
+}
+table{
+    border-color:black;
+    border-spacing: 0;
+}
+.true-main{
+    background-image: url(/front/css/Fotos/fundo.png);
+    height: 100px;
+}
+footer{
+    background-image: url(/front/css/Fotos/rodapé.png);
+    display: grid;
+}
