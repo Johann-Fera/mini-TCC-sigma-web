@@ -122,3 +122,13 @@ p {
     display: flex;
     justify-self: center;
 }
+.quadro{
+    width: 800px;
+    height: 700px;
+    background-color: #F9D5A8;
+    padding: 100px;
+    padding-top: 50px;
+}
+.input-box{
+    
+}
