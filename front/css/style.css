@@ -44,6 +44,7 @@ main{
     background-image: url(/front/css/Fotos/fundo.png);
     background-repeat: repeat-y;
     background-size: cover;
+    padding: 50px;
 }
 footer{
     background-image: url(/front/css/Fotos/rodapé.png);
@@ -131,6 +132,7 @@ p {
     padding: 100px;
     padding-top: 50px;
 }
-.input-box{
-    
+form{
+    padding: 50px;
+    width: 50px;
 }
