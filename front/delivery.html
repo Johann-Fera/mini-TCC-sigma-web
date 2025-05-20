@@ -1,11 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery</title>
+    <title>JACINTO BRASA</title>
+    <link rel="stylesheet" href="/front/css/style.css">
 </head>
 <body>
-    
+    <header>
+        <center>
+            <a href="index.html"><img src="/front/css/Fotos/jacinto_brasa.png" alt="jacinto_letreiro"></a>
+            <div class="header-list">
+                <table border="1" cellpadding="10" bordercolor="black">
+                    <tr>
+                        <th><a href="reserva.html" class="ahead">Reserva</a></th>
+                        <th><a href="cardapio.html" class="ahead">Cardápio</a></th>
+                        <th><a href="delivery.html" class="ahead">Delivery</a></th>
+                    </tr>
+                </table>
+            </div>
+        </center>
+    </header>
+    <!-- HEADER PRA MAIN -->
+    <main>
+        <div class="delivery">
+        <div class="true-main">   
+            <h2>DELIVERY</h2>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <img src="/front/css/Fotos/fraldinha.png">
+                    <span>Fraldinha - R$35,00</span>
+                    <input type="number" min="0">
+                </div>
+                <div class="menu-item">
+                    <img src="/front/css/Fotos/alcatra.png">
+                    <span>Alcatra - R$30,00</span>
+                    <input type="number" min="0">
+                </div>
+                <div class="menu-item">
+                    <img src="/front/css/Fotos/picanha.png">
+                    <span>Picanha- R$50,00</span>
+                    <input type="number" min="0">
+                </div>
+                <div class="menu-item">
+                    <img src="/front/css/Fotos/linguiça.png">
+                    <span>Linguiça - R$25,00</span>
+                    <input type="number" min="0">
+                </div>
+                <div class="menu-item">
+                    <img src="/front/css/Fotos/costela.png">
+                    <span>Costela - R$40,00</span>
+                    <input type="number" min="0">
+                </div>
+                <div class="menu-item">
+                    <img src="/front/css/Fotos/pão_de_alho.png">
+                    <span>Pão de Alho - R$10,00</span>
+                    <input type="number" min="0">
+                </div>
+            </div>
+            <div class="form-selectio">
+                <h3>Valor: R$<span id="valor-total">--</span></h3>
+                <h3>Informações do pedido</h3>
+                <input type="text" placeholder="Nome Completo">
+                <input type="text" placeholder="Telefone">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Endereço">
+                <input type="text" placeholder="Complemento">
+
+                <h3>Forma de Pagamento</h3>
+                <div class="payment-opitiond">
+                    <img src="/front/css/Fotos/boleto.png" alt="Boleto">
+                    <img src="/front/css/Fotos/cartao.png" alt="Cartão">
+                    <img src="/front/css/Fotos/pix.png" alt="Pix">
+                    <img src="/front/css/Fotos/dinheiro.png" alt="Dinheiro">
+                </div>
+
+                <div class="final-button">
+                    <button>Finalizar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- MAIN PRA FOOTER -->
+    <footer>
+        <div id="footerdiv">
+            <p>site por SIGMA WEB</p>
+            <div id="jacintodiv">
+                <img src="/front/css/Fotos/Jacinto logo.png" alt="" style="width: 210px; height: 210px;" id="jacinto_logo">
+            </div>    
+            <div id="localiza-contato-horario">
+                <p>Praça Roberto Mange, 30 - Santa Rosália - Sorocaba/SP, 18090-110</p>
+                <p>Segunda a Sexta 11:00-22:00 / Sábado e Domingo 11:00-23:00</p>
+                <p>Telefone: (15) 3212-7400 / WhatsApp: (15) 3212-7421</p>
+            </div>
+                <div id="icones-container">
+                <img src="/front/css/Fotos/Instagram.png" alt="logo_insta" class="icones">
+                <img src="/front/css/Fotos/twitter.png" alt="logo_X" class="icones">
+                <img src="/front/css/Fotos/Icon localização.png" alt="logo_gps" class="icones">
+                <img src="/front/css/Fotos/Zap.png" alt="logo_zap" class="icones">
+                <img src="/front/css/Fotos/sigma logo.png" alt="sigma_web" class="icones">       
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
