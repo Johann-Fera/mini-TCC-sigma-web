@@ -71,11 +71,11 @@ footer{
     font-weight: 400;
     font-style: normal;
     color: #F9D5A8;
-    padding: 3rem 3.5rem;
+    width: 100%;
+    padding-bottom: 1.5rem;
     background-size: cover;
     position: relative;
     margin: 0;
-    
 }
 .icones{
     width: 50px;
@@ -87,8 +87,7 @@ footer{
     flex-wrap: wrap; /* Permite que quebrem linha se necessário */
     gap: 10px; /* Espaçamento entre os ícones (opcional) */
     width: 100%;
-    margin-top: 2rem;
-    padding-top: 1rem;
+    margin-top: 1rem;
 }
 #localiza-contato-horario{
     display: flex;
@@ -98,6 +97,7 @@ footer{
     flex-wrap: wrap; /* Permite que quebrem linha se necessário */
     width: 100%;
     margin: 0;
+    margin-top: 0.5rem;
 }
 p {
     margin: 0;
@@ -113,7 +113,7 @@ p {
     align-items: center;
     flex-wrap: wrap; /* Permite que quebrem linha se necessário */
     width: 100%;
-    margin: 0;
+    margin-top: 1rem;
 }
 .broco{
     background-color: #F9D5A8;
@@ -123,4 +123,14 @@ p {
 .titleblock{
     display: flex;
     justify-self: center;
+}
+#copyrightsigmaweb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    width: 100%;
+    margin: 0;
+    color: white;
 }
