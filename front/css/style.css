@@ -117,12 +117,23 @@ p {
 }
 .broco{
     background-color: #F9D5A8;
-    height: 500px;
     margin: 50px;
+    padding: 25px;
 }
 .titleblock{
     display: flex;
     justify-self: center;
+    color: #FFF6D2;
+    font-family: "Alfa Slab One", serif;
+    text-shadow:
+    -2px -2px 0 #E46715,
+    2px -2px 0 #E46715,
+    -2px 2px 0 #E46715,
+    2px 2px 0 #E46715,
+    -3px 0px 0 #E46715,
+    3px 0px 0 #E46715,
+    0px -3px 0 #E46715,
+    0px 3px 0 #E46715;
 }
 .quadro{
     width: 800px;
@@ -130,4 +141,39 @@ p {
     background-color: #F9D5A8;
     padding: 100px;
     padding-top: 50px;
+}
+.img-comida{
+    width: 100px;
+    height: auto;
+}
+.ultragrid{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.desbota{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.abota{
+    color: #FFF6D2;
+    background-color: #97292C;
+    text-decoration: none;
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    font-family: "Alfa Slab One", serif;
+    text-shadow:
+    -2px -2px 0 #E46715,
+    2px -2px 0 #E46715,
+    -2px 2px 0 #E46715,
+    2px 2px 0 #E46715,
+    -3px 0px 0 #E46715,
+    3px 0px 0 #E46715,
+    0px -3px 0 #E46715,
+    0px 3px 0 #E46715;
+
+}
+.jacinto_grid{
+    display: flex;
 }
