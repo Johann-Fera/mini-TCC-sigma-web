@@ -134,5 +134,10 @@ p {
 }
 form{
     padding: 50px;
-    width: 50px;
+}
+button{
+    background-color: #97292C;
+}
+.entrar-dados{
+    
 }

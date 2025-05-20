@@ -5,6 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JACINTO BRASA</title>
     <link rel="stylesheet" href="/front/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f8e6d7;
+        }
+        header {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .delivery {
+            text-align: center;
+            background-color: #FFA500;
+            padding: 40px 20px;
+            margin: 20px;
+            border-radius: 15px;
+        }
+        /* Container with two vertical columns side by side */
+        .menu-columns {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-bottom: 30px;
+        }
+        /* Each column stacks items vertically */
+        .menu-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            /* optionally set a max width */
+            max-width: 180px;
+        }
+        .menu-item {
+            text-align: center;
+        }
+        .menu-item img {
+            width: 150px;
+            height: auto;
+            border-radius: 15px;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 8px;
+        }
+        .quantity-controls button {
+            padding: 10px;
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .quantity-controls input {
+            width: 40px;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 0 5px;
+        }
+        .form-selectio {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .form-selectio input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .total-value {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .final-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .final-button button {
+            padding: 10px 20px;
+            background-color: #8B0000;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Payment section - two vertical columns side by side */
+        .payment-columns {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            margin-top: 15px;
+            flex-wrap: nowrap; /* keep columns side by side */
+        }
+        .payment-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .payment-column img {
+            width: 80px;
+            height: auto;
+        }
+        .payment-column span {
+            display: block;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #8B0000;
+        }
+    </style>
 </head>
 <body>
     <center>
@@ -13,70 +131,114 @@
         </div>
     </center>
     <header>
-        <center>
-            <div class="header-list">
-                <table border="1" cellpadding="10" bordercolor="black">
-                    <tr>
-                        <th><a href="reserva.html" class="ahead">Reserva</a></th>
-                        <th><a href="cardapio.html" class="ahead">Cardápio</a></th>
-                        <th><a href="delivery.html" class="ahead">Delivery</a></th>
-                    </tr>
-                </table>
-            </div>
-        </center>
+        <div class="header-list">
+            <table border="1" cellpadding="10" bordercolor="black">
+                <tr>
+                    <th><a href="reserva.html" class="ahead">Reserva</a></th>
+                    <th><a href="cardapio.html" class="ahead">Cardápio</a></th>
+                    <th><a href="delivery.html" class="ahead">Delivery</a></th>
+                </tr>
+            </table>
+        </div>
     </header>
-    <!-- HEADER PRA MAIN -->
     <main>
         <div class="delivery">
-        <div class="true-main">   
             <h2>DELIVERY</h2>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <img src="/front/css/Fotos/fraldinha.png">
-                    <span>Fraldinha - R$35,00</span>
-                    <input type="number" min="0">
+            <div class="menu-columns">
+                <div class="menu-column">
+                    <div class="menu-item">
+                        <img src="/front/css/Fotos/fraldinha.png" alt="Fraldinha" />
+                        <span>Fraldinha - R$35,00</span>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('fraldinha')">-</button>
+                            <input type="number" id="fraldinha" value="0" min="0" />
+                            <button onclick="increaseQuantity('fraldinha')">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/front/css/Fotos/alcatra.png" alt="Alcatra" />
+                        <span>Alcatra - R$30,00</span>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('alcatra')">-</button>
+                            <input type="number" id="alcatra" value="0" min="0" />
+                            <button onclick="increaseQuantity('alcatra')">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/front/css/Fotos/picanha.png" alt="Picanha" />
+                        <span>Picanha - R$50,00</span>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('picanha')">-</button>
+                            <input type="number" id="picanha" value="0" min="0" />
+                            <button onclick="increaseQuantity('picanha')">+</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <img src="/front/css/Fotos/alcatra.png">
-                    <span>Alcatra - R$30,00</span>
-                    <input type="number" min="0">
-                </div>
-                <div class="menu-item">
-                    <img src="/front/css/Fotos/picanha.png">
-                    <span>Picanha- R$50,00</span>
-                    <input type="number" min="0">
-                </div>
-                <div class="menu-item">
-                    <img src="/front/css/Fotos/linguiça.png">
-                    <span>Linguiça - R$25,00</span>
-                    <input type="number" min="0">
-                </div>
-                <div class="menu-item">
-                    <img src="/front/css/Fotos/costela.png">
-                    <span>Costela - R$40,00</span>
-                    <input type="number" min="0">
-                </div>
-                <div class="menu-item">
-                    <img src="/front/css/Fotos/pão_de_alho.png">
-                    <span>Pão de Alho - R$10,00</span>
-                    <input type="number" min="0">
+                <div class="menu-column">
+                    <div class="menu-item">
+                        <img src="/front/css/Fotos/linguiça.png" alt="Linguiça" />
+                        <span>Linguiça - R$25,00</span>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('linguiça')">-</button>
+                            <input type="number" id="linguiça" value="0" min="0" />
+                            <button onclick="increaseQuantity('linguiça')">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/front/css/Fotos/costela.png" alt="Costela" />
+                        <span>Costela - R$40,00</span>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('costela')">-</button>
+                            <input type="number" id="costela" value="0" min="0" />
+                            <button onclick="increaseQuantity('costela')">+</button>
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="/front/css/Fotos/pão_de_alho.png" alt="Pão de Alho" />
+                        <span>Pão de Alho - R$10,00</span>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('pão_de_alho')">-</button>
+                            <input type="number" id="pão_de_alho" value="0" min="0" />
+                            <button onclick="increaseQuantity('pão_de_alho')">+</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="form-selectio">
+
+            <div class="total-value">
                 <h3>Valor: R$<span id="valor-total">--</span></h3>
+            </div>
+            
+            <div class="form-selectio">
                 <h3>Informações do pedido</h3>
-                <input type="text" placeholder="Nome Completo">
-                <input type="text" placeholder="Telefone">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Endereço">
-                <input type="text" placeholder="Complemento">
+                <input type="text" placeholder="Nome Completo" />
+                <input type="text" placeholder="Telefone" />
+                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Endereço" />
+                <input type="text" placeholder="Complemento" />
 
                 <h3>Forma de Pagamento</h3>
-                <div class="payment-opitiond">
-                    <img src="/front/css/Fotos/boleto.png" alt="Boleto">
-                    <img src="/front/css/Fotos/cartao.png" alt="Cartão">
-                    <img src="/front/css/Fotos/pix.png" alt="Pix">
-                    <img src="/front/css/Fotos/dinheiro.png" alt="Dinheiro">
+                <div class="payment-columns">
+                    <div class="payment-column">
+                        <div class="payment-option">
+                            <img src="/front/css/Fotos/boleto.png" alt="Boleto" />
+                            <span>Boleto</span>
+                        </div>
+                        <div class="payment-option">
+                            <img src="/front/css/Fotos/dinheiro.png" alt="Dinheiro" />
+                            <span>Dinheiro</span>
+                        </div>
+                    </div>
+                    <div class="payment-column">
+                        <div class="payment-option">
+                            <img src="/front/css/Fotos/cartao.png" alt="Cartão" />
+                            <span>Cartão</span>
+                        </div>
+                        <div class="payment-option">
+                            <img src="/front/css/Fotos/pix.png" alt="Pix" />
+                            <span>Pix</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="final-button">
@@ -85,7 +247,6 @@
             </div>
         </div>
     </main>
-    <!-- MAIN PRA FOOTER -->
     <footer>
         <div id="footerdiv">
             <p>site por SIGMA WEB</p>
@@ -97,7 +258,7 @@
                 <p>Segunda a Sexta 11:00-22:00 / Sábado e Domingo 11:00-23:00</p>
                 <p>Telefone: (15) 3212-7400 / WhatsApp: (15) 3212-7421</p>
             </div>
-                <div id="icones-container">
+            <div id="icones-container">
                 <img src="/front/css/Fotos/Instagram.png" alt="logo_insta" class="icones">
                 <img src="/front/css/Fotos/twitter.png" alt="logo_X" class="icones">
                 <img src="/front/css/Fotos/Icon localização.png" alt="logo_gps" class="icones">
@@ -106,5 +267,40 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        function increaseQuantity(item) {
+            let input = document.getElementById(item);
+            input.value = parseInt(input.value) + 1;
+            updateTotal();
+        }
+
+        function decreaseQuantity(item) {
+            let input = document.getElementById(item);
+            if (input.value > 0) {
+                input.value = parseInt(input.value) - 1;
+                updateTotal();
+            }
+        }
+
+        function updateTotal() {
+            let total = 0;
+            const prices = {
+                'fraldinha': 35,
+                'alcatra': 30,
+                'picanha': 50,
+                'linguiça': 25,
+                'costela': 40,
+                'pão_de_alho': 10,
+            };
+
+            for (const item in prices) {
+                const quantity = document.getElementById(item).value;
+                total += prices[item] * quantity;
+            }
+
+            document.getElementById('valor-total').innerText = total.toFixed(2);
+        }
+    </script>
 </body>
 </html>
