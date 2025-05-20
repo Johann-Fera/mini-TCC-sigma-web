@@ -137,7 +137,32 @@ form{
 }
 button{
     background-color: #97292C;
+    border: 0px;
 }
-.entrar-dados{
-    
+input{
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px;
+    display: flex;
+}
+.forms{
+    display: grid;
+    align-items: center;
+    gap: 10px;
+}
+#enviar{
+}
+#enviar:hover{
+    background-color: #F9D5A8;
+    color: #97292C;
+    transition: all linear 0.3s;
+    width: auto;
+    border: #97292C;
+    border-color: #97292C;
+}
+#enviar:not(hover){
+    background-color: #97292C;
+    color: #F9D5A8;
+    transition: all linear 0.3s;
+    width: auto;
 }
