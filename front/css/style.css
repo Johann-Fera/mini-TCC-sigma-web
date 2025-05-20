@@ -3,8 +3,10 @@
 body{
     margin: 0;
 }
-header{
+.jacinto_letreiro{
     background-color: #2D1B0C;
+}
+header{
     position: sticky;
     top: 0;
     font-family: "Alfa Slab One", serif;
