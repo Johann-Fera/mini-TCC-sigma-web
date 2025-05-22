@@ -12,9 +12,16 @@
             background-color: #F9D5A8;
             padding: 100px;
             padding-top: 50px;
+            align-items: center;
+            margin: 100px;
+            text-align: center;
+            border-radius: 15px;
+            border-color: #97292C;
+            border: 2px;
         }
         form{
             padding: 50px;
+            width: auto;
         }
         button{
             background-color: #97292C;
@@ -26,17 +33,21 @@
             padding: 10px;
             display: flex;
         }
+        .input-box{
+            width: 200px;
+            padding: 10px;
+        }
         .forms{
-            display: grid;
             align-items: center;
             gap: 10px;
+            width: auto;
         }
         #enviar:hover{
             background-color: #F9D5A8;
             color: #97292C;
             transition: all linear 0.3s;
             width: auto;
-            border: #97292C;
+            border: solid 2px #97292C;
             border-color: #97292C;
         }
         #enviar:not(hover){
@@ -44,6 +55,12 @@
             color: #F9D5A8;
             transition: all linear 0.3s;
             width: auto;
+        }
+        .espetinho{
+            transform: scaleX(-1);
+            width: 400px;
+            margin-bottom: 100px;
+            margin-left: 30rem;
         }
     </style>
 </head>
@@ -67,44 +84,44 @@
         </center>
     </header>
     <main>
-        <center>
         <div class="painel"></div>
         <div class="true-main"> 
-
-            <div class="quadro">
+            <div class="quadro"> 
                 <h1>Faça sua reserva!</h1>
-            <form>
-                <div class="forms">
-                <div class="input-box">
-                    <input placeholder="Nome Completo" type="text">
-                </div>
+                    <form>
+                        <div class="forms">
+                            <div class="input-box">
+                                <input placeholder="Nome Completo" type="text">
+                            </div>
 
-                <div class="input-box">
-                    <input placeholder="Telefone" type="tel">
-                </div>
+                            <div class="input-box">
+                                <input placeholder="Telefone" type="tel">
+                            </div>
 
-                <div class="input-box">
-                    <input placeholder="Email" type="email">
-                </div>
+                            <div class="input-box">
+                                <input placeholder="Email" type="email">
+                            </div>
 
-                <div class="input-box">
-                    <input placeholder="Dia" type="date">
-                    <input placeholder="Horário" type="time">
-                </div>
+                            <div class="input-box">
+                                <input placeholder="Dia" type="date">
+                                <input placeholder="Horário" type="time">
+                            </div>
 
-                <div class="input-box">
-                    <input placeholder="Quantidade de Pessoas" type="number">
-                </div>
+                            <div class="input-box">
+                                <input placeholder="Quantidade de Pessoas" type="number">
+                            </div>
 
-                <div><input placeholder="Observação" type="text"></div>
-                <button type="submit" id="enviar">Enviar</button>
+                            <div class="input-box">
+                                <input placeholder="Observação" type="text">
+                            </div>
+
+                            <button type="submit" id="enviar">Enviar</button>
+                        </div>
+                    <img class="espetinho" src="css/Fotos/espetinho.png" alt="espetinho">
+                    </form>
             </div>
-            </form>
         </div>
-        </div>
-    </center>
     </main>
-
     <footer>
         <div id="footerdiv">
             <div id="jacintodiv">
