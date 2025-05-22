@@ -158,6 +158,14 @@
             font-size: 25px;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .final-button button:hover {
+            background-color: #a50000; /* Cor mais clara ao passar o mouse */
+            transform: scale(1.05); /* Aumenta o botão ligeiramente ao passar o mouse */
+        }
+        .final-button button:active {
+            transform: scale(0.95); /* Diminui o botão ligeiramente ao clicar */
         }
         /* Payment section - two vertical columns side by side */
         .payment-columns {
@@ -192,6 +200,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 16px; /* Tamanho da fonte */
+            color: #333; /* Cor do texto */
+            transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
+        }
+        .payment-button:hover {
+            background-color: #ffe0a1; /* Cor de fundo ao passar o mouse */
+            transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+        }
+        .payment-button:active {
+            transform: scale(0.95); /* Efeito de redução ao clicar */
         }
         .payment-button img {
             width: 150px; /* Ajuste o tamanho da imagem do botão aqui */
@@ -231,65 +249,79 @@
                 <div class="menu-column">
                     <div class="menu-item">
                         <img src="/front/css/Fotos/fraldinha.png" alt="Fraldinha" />
-
-                        <h3 class="nome-comida">Fraldinha</h3> 
-                        <h3>R$35,00</h3>
-                        <div class="quantity-controls">
-                            <button onclick="decreaseQuantity('fraldinha')">-</button>
-                            <input type="number" id="fraldinha" value="0" min="0" />
-                            <button onclick="increaseQuantity('fraldinha')">+</button>
+                        <div>
+                            <h3 class="nome-comida">Fraldinha</h3> 
+                            <h3>R$35,00</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('fraldinha')">-</button>
+                                <input type="number" id="fraldinha" value="0" min="0" />
+                                <button onclick="increaseQuantity('fraldinha')">+</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/alcatra.png" alt="Alcatra" />
-                        <h3 class="nome-comida">Alcatra</h3>
-                        <h3>R$30,00</h3>
-                        <div class="quantity-controls">
-                            <button onclick="decreaseQuantity('alcatra')">-</button>
-                            <input type="number" id="alcatra" value="0" min="0" />
-                            <button onclick="increaseQuantity('alcatra')">+</button>
+                        <div>
+                            <h3 class="nome-comida">Alcatra</h3>
+                            <h3>R$30,00</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('alcatra')">-</button>
+                                <input type="number" id="alcatra" value="0" min="0" />
+                                <button onclick="increaseQuantity('alcatra')">+</button>
+                            </div>
+
                         </div>
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/picanha.png" alt="Picanha" />
-                        <h3 class="nome-comida">Picanha</h3>
-                        <h3>R$50,00</h3>
-                        <div class="quantity-controls">
-                            <button onclick="decreaseQuantity('picanha')">-</button>
-                            <input type="number" id="picanha" value="0" min="0" />
-                            <button onclick="increaseQuantity('picanha')">+</button>
+                        <div>
+                            <h3 class="nome-comida">Picanha</h3>
+                            <h3>R$50,00</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('picanha')">-</button>
+                                <input type="number" id="picanha" value="0" min="0" />
+                                <button onclick="increaseQuantity('picanha')">+</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="menu-column">
                     <div class="menu-item">
                         <img src="/front/css/Fotos/linguiça.png" alt="Linguiça" />
-                        <h3 class="nome-comida">Linguiça</h3>
-                        <h3>$25,00</h3>
-                        <div class="quantity-controls">
-                            <button onclick="decreaseQuantity('linguiça')">-</button>
-                            <input type="number" id="linguiça" value="0" min="0" />
-                            <button onclick="increaseQuantity('linguiça')">+</button>
+                        <div>
+                            <h3 class="nome-comida">Linguiça</h3>
+                            <h3>$25,00</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('linguiça')">-</button>
+                                <input type="number" id="linguiça" value="0" min="0" />
+                                <button onclick="increaseQuantity('linguiça')">+</button>
+                            </div>     
                         </div>
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/costela.png" alt="Costela" />
-                        <h3 class="nome-comida">Costela</h3>
-                        <h3>$40,00</h3>
-                        <div class="quantity-controls">
-                            <button onclick="decreaseQuantity('costela')">-</button>
-                            <input type="number" id="costela" value="0" min="0" />
-                            <button onclick="increaseQuantity('costela')">+</button>
+                        <div>
+                            <h3 class="nome-comida">Costela</h3>
+                            <h3>$40,00</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('costela')">-</button>
+                                <input type="number" id="costela" value="0" min="0" />
+                                <button onclick="increaseQuantity('costela')">+</button>
+                            </div>
                         </div>
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/pão_de_alho.png" alt="Pão de Alho" />
-                        <h3 class="nome-comida">Pão de Alho</h3>
-                        <h3>$10,00</h3>
-                        <div class="quantity-controls">
-                            <button onclick="decreaseQuantity('pão_de_alho')">-</button>
-                            <input type="number" id="pão_de_alho" value="0" min="0" />
-                            <button onclick="increaseQuantity('pão_de_alho')">+</button>
+                        <div>
+                            <h3 class="nome-comida">Pão de Alho</h3>
+                            <h3>$10,00</h3>
+                            <div class="quantity-controls">
+                                <button onclick="decreaseQuantity('pão_de_alho')">-</button>
+                                <input type="number" id="pão_de_alho" value="0" min="0" />
+                                <button onclick="increaseQuantity('pão_de_alho')">+</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>
