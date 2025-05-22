@@ -211,3 +211,13 @@ input{
 .jacinto_grid{
     display: flex;
 }
+#copyrightsigmaweb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    width: 100%;
+    margin: 0;
+    color: white;
+}
