@@ -158,6 +158,14 @@
             font-size: 25px;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .final-button button:hover {
+            background-color: #a50000; /* Cor mais clara ao passar o mouse */
+            transform: scale(1.05); /* Aumenta o botão ligeiramente ao passar o mouse */
+        }
+        .final-button button:active {
+            transform: scale(0.95); /* Diminui o botão ligeiramente ao clicar */
         }
         /* Payment section - two vertical columns side by side */
         .payment-columns {
