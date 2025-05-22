@@ -6,18 +6,26 @@
     <title>JACINTO BRASA</title>
     <link rel="stylesheet" href="/front/css/style.css">
     <style>
-        #produtospopulares{
-            background-image: url(/front/css/Fotos/Rectangle9.png);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #97292C;
-            margin: -50px;
-            height: 470px;
-        }
-        .imagemprodutospopulares{
-            width: 16%;
-            height: 30%;
-        }
+    #produtospopulares{
+    background-image: url(/front/css/Fotos/Rectangle9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #97292C;
+    margin: -50px;
+    height: 470px;
+    display: flex;
+    position: relative;
+}
+.imagemprodutospopulares{
+    width: 16%;
+    height: 30%;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    gap: 10px; /* Espaçamento entre os ícones (opcional) */
+    width: 100%;
+    margin-top: 1rem;
+}
     </style>
 </head>
 <body>

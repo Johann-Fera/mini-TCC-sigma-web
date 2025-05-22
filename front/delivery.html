@@ -12,12 +12,43 @@
             background-image: url("css/Fotos/fundo.png");
             background-size: 100%;
             background-repeat: no-repeat;
+            object-fit: contain;
+            color: #97292C;
         }
         header {
             background-color: #8B0000;
             color: white;
             text-align: center;
             padding: 20px 0;
+        }
+        .titleblock{
+        display: flex;
+        justify-self: center;
+        color: #FFF6D2;
+        font-family: "Alfa Slab One", serif;
+        font-weight: normal;
+        text-shadow:
+        -2px -2px 0 #E46715,
+        2px -2px 0 #E46715,
+        -2px 2px 0 #E46715,
+        2px 2px 0 #E46715,
+        -3px 0px 0 #E46715,
+        3px 0px 0 #E46715,
+        0px -3px 0 #E46715,
+        0px 3px 0 #E46715;
+    }
+        .nome-comida{
+            color: #FFF6D2;
+            text-shadow:
+            -2px -2px 0 #97292C,
+            2px -2px 0 #97292C,
+            -2px 2px 0 #97292C,
+            2px 2px 0 #97292C,
+            -3px 0px 0 #97292C,
+            3px 0px 0 #97292C,
+            0px -3px 0 #97292C,
+            0px 3px 0 #97292C;
+            font-weight: normal;
         }
         .delivery {
             text-align: center;
@@ -45,7 +76,10 @@
             margin-right: 350px;
         }
         .menu-item {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-around; /* Espaçamento igual ao redor */
+            margin: 20px 0;
         }
         .menu-item img {
             width: 300px;
@@ -59,32 +93,44 @@
             margin-top: 8px;
         }
         .quantity-controls button {
-            padding: 10px;
-            background-color: #8B0000;
-            color: white;
+            width: 30px;
+            height: 30px;
+            background-color: #fff6d2;
+            color: black;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
         }
         .quantity-controls input {
-            width: 40px;
+            width: 90px;
+            height: 20px;
+            color: #FFF6D2;
             text-align: center;
-            border-radius: 5px;
+            border-radius: 10px;
             border: 1px solid #ccc;
             margin: 0 5px;
+            background-color: #97292C;
+        }
+        /* Para Chrome, Safari, Opera, Edge */
+        .quantity-controls input[type=number]::-webkit-inner-spin-button,
+        .quantity-controls input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
         .form-selectio {
             margin-top: 20px;
             text-align: left;
             text-align: center;
             color: #97292d;
+            
         }
         .form-selectio input {
             width: 50%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
-            border-radius: 5px;
+            border-radius: 18px;
+            background-color: #FFF6D2;
         }
         .total-value {
             text-align: center;
@@ -95,18 +141,21 @@
         }
         span{
             background-color: #fff6d2;
-            border-radius: 5px;
+            border-radius: 20px;
+            display: inline-block;
+            width: 100px;
         }
         .final-button {
             text-align: center;
             margin-top: 20px;
         }
         .final-button button {
-            padding: 10px 20px;
+            font-family: "Alfa Slab One", serif;
+            padding: 10px 100px;
             background-color: #8B0000;
             border: none;
-            color: white;
-            font-size: 16px;
+            color: #FFF6D2;
+            font-size: 25px;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -137,16 +186,17 @@
         .payment-button {
             background-color: #fff6d2; /* Cor de fundo igual ao da seção de delivery */
             border: none;
-            border-radius: 10px;
+            border-radius: 40px;
             cursor: pointer;
-            padding: 20px; /* Ajuste o tamanho do botão aqui */
+            padding: 15px; /* Ajuste o tamanho do botão aqui */
             display: flex;
             align-items: center;
             justify-content: center;
         }
         .payment-button img {
             width: 150px; /* Ajuste o tamanho da imagem do botão aqui */
-            height: auto;
+            height: 50px;
+            object-fit: contain;
             margin-right: 5px; /* Espaçamento entre a imagem e o texto */
         }
         .payment-column span {
@@ -176,12 +226,14 @@
     </header>
     <main>
         <div class="delivery">
-            <h2>DELIVERY</h2>
+            <h2 class="titleblock">DELIVERY</h2>
             <div class="menu-columns">
                 <div class="menu-column">
                     <div class="menu-item">
                         <img src="/front/css/Fotos/fraldinha.png" alt="Fraldinha" />
-                        <h3>Fraldinha - R$35,00</h3>
+
+                        <h3 class="nome-comida">Fraldinha</h3> 
+                        <h3>R$35,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('fraldinha')">-</button>
                             <input type="number" id="fraldinha" value="0" min="0" />
@@ -190,7 +242,8 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/alcatra.png" alt="Alcatra" />
-                        <h3>Alcatra - R$30,00</h3>
+                        <h3 class="nome-comida">Alcatra</h3>
+                        <h3>R$30,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('alcatra')">-</button>
                             <input type="number" id="alcatra" value="0" min="0" />
@@ -199,7 +252,8 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/picanha.png" alt="Picanha" />
-                        <h3>Picanha - R$50,00</h3>
+                        <h3 class="nome-comida">Picanha</h3>
+                        <h3>R$50,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('picanha')">-</button>
                             <input type="number" id="picanha" value="0" min="0" />
@@ -210,7 +264,8 @@
                 <div class="menu-column">
                     <div class="menu-item">
                         <img src="/front/css/Fotos/linguiça.png" alt="Linguiça" />
-                        <h3>Linguiça - R$25,00</h3>
+                        <h3 class="nome-comida">Linguiça</h3>
+                        <h3>$25,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('linguiça')">-</button>
                             <input type="number" id="linguiça" value="0" min="0" />
@@ -219,7 +274,8 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/costela.png" alt="Costela" />
-                        <h3>Costela - R$40,00</h3>
+                        <h3 class="nome-comida">Costela</h3>
+                        <h3>$40,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('costela')">-</button>
                             <input type="number" id="costela" value="0" min="0" />
@@ -228,7 +284,8 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/pão_de_alho.png" alt="Pão de Alho" />
-                        <h3>Pão de Alho - R$10,00</h3>
+                        <h3 class="nome-comida">Pão de Alho</h3>
+                        <h3>$10,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('pão_de_alho')">-</button>
                             <input type="number" id="pão_de_alho" value="0" min="0" />
@@ -239,16 +296,18 @@
             </div>
 
             <div class="total-value">
-                <h3>Valor: R$<span id="valor-total">--</span></h3>
+                <h3>Valor: R$ <span id="valor-total">--</span></h3>
             </div>
             
             <div class="form-selectio">
+            <center>
                 <h3>Informações do pedido</h3>
                 <input type="text" placeholder="Nome Completo" />
                 <input type="text" placeholder="Telefone" />
                 <input type="text" placeholder="Email" />
                 <input type="text" placeholder="Endereço" />
                 <input type="text" placeholder="Complemento" />
+            </center>
 
                 <h3>Forma de Pagamento</h3>
                 <div class="payment-columns">
