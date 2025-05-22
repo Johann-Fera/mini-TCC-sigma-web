@@ -6,15 +6,17 @@
     <title>JACINTO BRASA</title>
     <link rel="stylesheet" href="/front/css/style.css">
     <style>
-    #produtospopulares{
+#produtospopulares {
     background-image: url(/front/css/Fotos/Rectangle9.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #97292C;
-    margin: -50px;
-    height: 470px;
+    padding: 2rem;
+    height: auto;
     display: flex;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 .imagemprodutospopulares{
     width: 16%;
@@ -25,6 +27,22 @@
     gap: 10px; /* Espaçamento entre os ícones (opcional) */
     width: 100%;
     margin-top: 1rem;
+}
+.produtos-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+.produtocontainer {
+    background-color: rgba(255, 255, 255, 0.1); /* opcional, só pra destacar */
+    padding: 1rem;
+    border-radius: 8px;
+    color: #FFF6D2;
+    width: 250px;
+    box-sizing: border-box;
 }
     </style>
 </head>
@@ -53,28 +71,30 @@
         <div class="true-main"> 
             <div id="produtospopulares">
                 <h2 style="color: #FFF6D2; margin: 0;">PRODUTOS POPULARES</h2>
-                <div class="produtocontainer">
-                    <div class="imagem-container">
-                        <img src="/front/css/Fotos/picanha.png" alt="" class="imagemprodutospopulares" />
+                <div class="produtos-grid">
+                    <div class="produtocontainer">
+                        <div class="imagem-container">
+                            <img src="/front/css/Fotos/picanha.png" alt="" class="imagemprodutospopulares" />
+                        </div>
+                        <h2>Picanha</h2>
+                        <p>Suculenta e cheia de sabores, é o carro chefe dos pedidos</p>
                     </div>
-                    <h2>Picanha</h2>
-                    <p>Suculenta e cheia de sabores, é o carro chefe dos pedidos</p>
-                </div>
-                <div class="produtocontainer">
-                    <div class="imagem-container">
-                        <img src="/front/css/Fotos/costela.png" alt="" class="imagemprodutospopulares"/>
+                    <div class="produtocontainer">
+                        <div class="imagem-container">
+                            <img src="/front/css/Fotos/costela.png" alt="" class="imagemprodutospopulares"/>
+                        </div>
+                            <h2>Costela</h2>
+                            <p>Acompanhada de molho barbecue e preparada com temperos especiais.</p>
                     </div>
-                        <h2>Costela</h2>
-                        <p>Acompanhada de molho barbecue e preparada com temperos especiais.</p>
-                </div>
-                <div class="produtocontainer">
-                    <div class="imagem-container">
-                        <img src="/front/css/Fotos/alcatra.png" alt="" class="imagemprodutospopulares"/>
+                    <div class="produtocontainer">
+                        <div class="imagem-container">
+                            <img src="/front/css/Fotos/alcatra.png" alt="" class="imagemprodutospopulares"/>
+                        </div>
+                            <h2>Alcatra</h2>
+                                <p>Feita com temperos que realçam o sabor da carne.</p>
                     </div>
-                        <h2>Alcatra</h2>
-                            <p>Feita com temperos que realçam o sabor da carne.</p>
                 </div>
-            </div>
+                </div>
             <div id="reserva/delivery">
                 <h3>Reserva</h3>
                 <h3>Deseja realizar  uma reserva?</h3>
