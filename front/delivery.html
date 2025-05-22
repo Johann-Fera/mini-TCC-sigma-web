@@ -7,9 +7,11 @@
     <link rel="stylesheet" href="/front/css/style.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Alfa Slab One", serif;
             margin: 0;
-            background-color: #f8e6d7;
+            background-image: url("css/Fotos/fundo.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
         header {
             background-color: #8B0000;
@@ -19,10 +21,12 @@
         }
         .delivery {
             text-align: center;
-            background-color: #FFA500;
             padding: 40px 20px;
             margin: 20px;
             border-radius: 15px;
+            background-image: url("css/Fotos/fundo2.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
         }
         /* Container with two vertical columns side by side */
         .menu-columns {
@@ -38,13 +42,14 @@
             gap: 30px;
             /* optionally set a max width */
             max-width: 180px;
+            margin-right: 350px;
         }
         .menu-item {
             text-align: center;
         }
         .menu-item img {
-            width: 150px;
-            height: auto;
+            width: 300px;
+            height: 200px;
             border-radius: 15px;
         }
         .quantity-controls {
@@ -71,9 +76,11 @@
         .form-selectio {
             margin-top: 20px;
             text-align: left;
+            text-align: center;
+            color: #97292d;
         }
         .form-selectio input {
-            width: 100%;
+            width: 50%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -84,6 +91,11 @@
             margin: 20px 0;
             font-size: 1.2em;
             font-weight: bold;
+            color: #97292d;
+        }
+        span{
+            background-color: #fff6d2;
+            border-radius: 5px;
         }
         .final-button {
             text-align: center;
@@ -122,6 +134,27 @@
             font-weight: bold;
             color: #8B0000;
         }
+        .payment-button {
+            background-color: #fff6d2; /* Cor de fundo igual ao da seção de delivery */
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            padding: 20px; /* Ajuste o tamanho do botão aqui */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .payment-button img {
+            width: 150px; /* Ajuste o tamanho da imagem do botão aqui */
+            height: auto;
+            margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+        }
+        .payment-column span {
+            display: block;
+            margin-top: 5px;
+            font-weight: bold;
+            color: #8B0000;
+        }
     </style>
 </head>
 <body>
@@ -148,7 +181,7 @@
                 <div class="menu-column">
                     <div class="menu-item">
                         <img src="/front/css/Fotos/fraldinha.png" alt="Fraldinha" />
-                        <span>Fraldinha - R$35,00</span>
+                        <h3>Fraldinha - R$35,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('fraldinha')">-</button>
                             <input type="number" id="fraldinha" value="0" min="0" />
@@ -157,7 +190,7 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/alcatra.png" alt="Alcatra" />
-                        <span>Alcatra - R$30,00</span>
+                        <h3>Alcatra - R$30,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('alcatra')">-</button>
                             <input type="number" id="alcatra" value="0" min="0" />
@@ -166,7 +199,7 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/picanha.png" alt="Picanha" />
-                        <span>Picanha - R$50,00</span>
+                        <h3>Picanha - R$50,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('picanha')">-</button>
                             <input type="number" id="picanha" value="0" min="0" />
@@ -177,7 +210,7 @@
                 <div class="menu-column">
                     <div class="menu-item">
                         <img src="/front/css/Fotos/linguiça.png" alt="Linguiça" />
-                        <span>Linguiça - R$25,00</span>
+                        <h3>Linguiça - R$25,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('linguiça')">-</button>
                             <input type="number" id="linguiça" value="0" min="0" />
@@ -186,7 +219,7 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/costela.png" alt="Costela" />
-                        <span>Costela - R$40,00</span>
+                        <h3>Costela - R$40,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('costela')">-</button>
                             <input type="number" id="costela" value="0" min="0" />
@@ -195,7 +228,7 @@
                     </div>
                     <div class="menu-item">
                         <img src="/front/css/Fotos/pão_de_alho.png" alt="Pão de Alho" />
-                        <span>Pão de Alho - R$10,00</span>
+                        <h3>Pão de Alho - R$10,00</h3>
                         <div class="quantity-controls">
                             <button onclick="decreaseQuantity('pão_de_alho')">-</button>
                             <input type="number" id="pão_de_alho" value="0" min="0" />
@@ -220,23 +253,20 @@
                 <h3>Forma de Pagamento</h3>
                 <div class="payment-columns">
                     <div class="payment-column">
-                        <div class="payment-option">
+                        <button class="payment-button" aria-label="Boleto">
                             <img src="/front/css/Fotos/boleto.png" alt="Boleto" />
-                            <span>Boleto</span>
-                        </div>
-                        <div class="payment-option">
+                        </button>
+                        <button class="payment-button" aria-label="Dinheiro">
                             <img src="/front/css/Fotos/dinheiro.png" alt="Dinheiro" />
-                            <span>Dinheiro</span>
-                        </div>
+                        </button>
                     </div>
                     <div class="payment-column">
-                        <div class="payment-option">
+                        <button class="payment-button" aria-label="Cartão">
                             <img src="/front/css/Fotos/cartao.png" alt="Cartão" />
-                            <span>Cartão</span>
-                        </div>
-                        <div class="payment-option">
+                        </button>
+                        <button class="payment-button" aria-label="Pix">
                             <img src="/front/css/Fotos/pix.png" alt="Pix" />
-                            <span>Pix</span>
+                        </button>
                         </div>
                     </div>
                 </div>
