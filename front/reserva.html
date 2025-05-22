@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JACINTO Reserva</title>
     <link rel="stylesheet" href="/front/css/style.css">
+    <style>
+        .quadro{
+            width: 800px;
+            height: 700px;
+            background-color: #F9D5A8;
+            padding: 100px;
+            padding-top: 50px;
+        }
+        form{
+            padding: 50px;
+        }
+        button{
+            background-color: #97292C;
+            border: 0px;
+        }
+        input{
+            border-radius: 5px;
+            border: 0px;
+            padding: 10px;
+            display: flex;
+        }
+        .forms{
+            display: grid;
+            align-items: center;
+            gap: 10px;
+        }
+        #enviar:hover{
+            background-color: #F9D5A8;
+            color: #97292C;
+            transition: all linear 0.3s;
+            width: auto;
+            border: #97292C;
+            border-color: #97292C;
+        }
+        #enviar:not(hover){
+            background-color: #97292C;
+            color: #F9D5A8;
+            transition: all linear 0.3s;
+            width: auto;
+        }
+    </style>
 </head>
 <body>
     <center>
@@ -34,12 +75,27 @@
                 <h1>Faça sua reserva!</h1>
             <form>
                 <div class="forms">
-                <div><input placeholder="Nome Completo" type="text"></div>
-                <div><input placeholder="Telefone" type="tel"></div>
-                <div><input placeholder="Email" type="email"></div>
-                <div><input placeholder="Dia" type="date"></div>
-                <div><input placeholder="Horário" type="time"></div>
-                <div><input placeholder="Quantidade de Pessoas" type="number"></div>
+                <div class="input-box">
+                    <input placeholder="Nome Completo" type="text">
+                </div>
+
+                <div class="input-box">
+                    <input placeholder="Telefone" type="tel">
+                </div>
+
+                <div class="input-box">
+                    <input placeholder="Email" type="email">
+                </div>
+
+                <div class="input-box">
+                    <input placeholder="Dia" type="date">
+                    <input placeholder="Horário" type="time">
+                </div>
+
+                <div class="input-box">
+                    <input placeholder="Quantidade de Pessoas" type="number">
+                </div>
+
                 <div><input placeholder="Observação" type="text"></div>
                 <button type="submit" id="enviar">Enviar</button>
             </div>
@@ -70,4 +126,4 @@
         </div>
      </footer>
 </body>
-</html>
+</html> 
