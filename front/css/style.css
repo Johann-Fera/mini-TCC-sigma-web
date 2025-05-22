@@ -213,16 +213,3 @@ p {
     0px 3px 0 #97292C;
     font-weight: normal;
 }
-/*otras coisa*/
-#produtospopulares{
-    background-image: url(/front/css/Fotos/Rectangle9.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #97292C;
-    margin: -50px;
-    height: 470px;
-}
-.imagemprodutospopulares{
-    width: 16%;
-    height: 30%;
-}
