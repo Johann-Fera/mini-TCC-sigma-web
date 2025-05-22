@@ -11,7 +11,6 @@ header{
     position: sticky;
     top: 0;
     font-family: "Alfa Slab One", serif;
-    font-weight: 400;
     font-size:x-large;
     font-style: normal;
     text-shadow:
@@ -27,7 +26,7 @@ header{
 .ahead{
     color: #DEB168;
     text-decoration: none;
-
+    font-weight: normal;
 }
 .header-list{
     color: #DEB168;
