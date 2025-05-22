@@ -45,6 +45,7 @@ main{
     background-repeat: repeat-y;
     background-size: cover;
     padding: 50px;
+    position: relative;
 }
 footer{
     background-image: url(/front/css/Fotos/rodapé.png);
@@ -220,4 +221,17 @@ input{
     width: 100%;
     margin: 0;
     color: white;
+}
+
+#produtospopulares{
+    background-image: url(/front/css/Fotos/Rectangle9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #97292C;
+    margin: -50px;
+    height: 470px;
+}
+.imagemprodutospopulares{
+    width: 16%;
+    height: 30%;
 }
