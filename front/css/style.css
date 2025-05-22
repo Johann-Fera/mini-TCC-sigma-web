@@ -149,13 +149,6 @@ p {
     0px -3px 0 #E46715,
     0px 3px 0 #E46715;
 }
-.quadro{
-    width: 800px;
-    height: 700px;
-    background-color: #F9D5A8;
-    padding: 100px;
-    padding-top: 50px;
-}
 .img-comida{
     width: 100px;
     height: auto;
@@ -192,8 +185,21 @@ p {
 }
 .jacinto_grid{
     display: flex;
+    font-family: "Alfa Slab One", serif;
+    color: #97292C;
+}
+.nome-comida{
+    color: #FFF6D2;
+
 }
 /*otras coisa*/
+.quadro{
+    width: 800px;
+    height: 700px;
+    background-color: #F9D5A8;
+    padding: 100px;
+    padding-top: 50px;
+}
 form{
     padding: 50px;
 }
