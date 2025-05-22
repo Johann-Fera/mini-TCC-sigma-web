@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
+/*Coisa do modelo*/
 body{
     margin: 0;
 }
@@ -117,6 +118,17 @@ p {
     width: 100%;
     margin-top: 1rem;
 }
+#copyrightsigmaweb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    width: 100%;
+    margin: 0;
+    color: white;
+}
+/*Coisa do cardapio*/
 .broco{
     background-color: #F9D5A8;
     margin: 50px;
@@ -127,6 +139,7 @@ p {
     justify-self: center;
     color: #FFF6D2;
     font-family: "Alfa Slab One", serif;
+    font-weight: normal;
     text-shadow:
     -2px -2px 0 #E46715,
     2px -2px 0 #E46715,
@@ -137,6 +150,50 @@ p {
     0px -3px 0 #E46715,
     0px 3px 0 #E46715;
 }
+.img-comida{
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+.ultragrid{
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 10px;
+}
+.desbota{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.abota{
+    color: #FFF6D2;
+    background-color: #97292C;
+    text-decoration: none;
+    width: 500px;
+    text-align: center;
+    padding: 10px;
+    font-family: "Alfa Slab One", serif;
+    text-shadow:
+    -2px -2px 0 #E46715,
+    2px -2px 0 #E46715,
+    -2px 2px 0 #E46715,
+    2px 2px 0 #E46715,
+    -3px 0px 0 #E46715,
+    3px 0px 0 #E46715,
+    0px -3px 0 #E46715,
+    0px 3px 0 #E46715;
+
+}
+.jacinto_grid{
+    display: flex;
+    font-family: "Alfa Slab One", serif;
+    color: #97292C;
+}
+.nome-comida{
+    color: #FFF6D2;
+
+}
+/*otras coisa*/
 .quadro{
     width: 800px;
     height: 700px;
@@ -175,63 +232,4 @@ input{
     color: #F9D5A8;
     transition: all linear 0.3s;
     width: auto;
-}
-
-.img-comida{
-    width: 100px;
-    height: auto;
-}
-.ultragrid{
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.desbota{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-.abota{
-    color: #FFF6D2;
-    background-color: #97292C;
-    text-decoration: none;
-    width: 500px;
-    text-align: center;
-    padding: 10px;
-    font-family: "Alfa Slab One", serif;
-    text-shadow:
-    -2px -2px 0 #E46715,
-    2px -2px 0 #E46715,
-    -2px 2px 0 #E46715,
-    2px 2px 0 #E46715,
-    -3px 0px 0 #E46715,
-    3px 0px 0 #E46715,
-    0px -3px 0 #E46715,
-    0px 3px 0 #E46715;
-
-}
-.jacinto_grid{
-    display: flex;
-}
-#copyrightsigmaweb{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;
-    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
-    width: 100%;
-    margin: 0;
-    color: white;
-}
-
-#produtospopulares{
-    background-image: url(/front/css/Fotos/Rectangle9.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #97292C;
-    margin: -50px;
-    height: 470px;
-}
-.imagemprodutospopulares{
-    width: 16%;
-    height: 30%;
 }
