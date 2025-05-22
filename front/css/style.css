@@ -117,6 +117,16 @@ p {
     width: 100%;
     margin-top: 1rem;
 }
+#copyrightsigmaweb{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
+    width: 100%;
+    margin: 0;
+    color: white;
+}
 /*Coisa do cardapio*/
 .broco{
     background-color: #F9D5A8;
@@ -128,6 +138,7 @@ p {
     justify-self: center;
     color: #FFF6D2;
     font-family: "Alfa Slab One", serif;
+    font-weight: normal;
     text-shadow:
     -2px -2px 0 #E46715,
     2px -2px 0 #E46715,
@@ -148,10 +159,12 @@ p {
 .img-comida{
     width: 100px;
     height: auto;
+    margin-right: 10px;
 }
 .ultragrid{
     display: grid;
     grid-template-columns: auto auto;
+    row-gap: 10px;
 }
 .desbota{
     display: flex;
@@ -212,14 +225,4 @@ input{
     color: #F9D5A8;
     transition: all linear 0.3s;
     width: auto;
-}
-#copyrightsigmaweb{
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;
-    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
-    width: 100%;
-    margin: 0;
-    color: white;
 }
