@@ -23,7 +23,6 @@ body{
     text-align: center;
 }
 .imagemprodutospopulares{
-    width: 16%;
     height: 30%;
     display: flex;
     justify-content: center; /* Centraliza horizontalmente */
@@ -41,7 +40,7 @@ body{
     max-width: 1200px;
 }
 .produtocontainer {
-    background-color: rgba(255, 255, 255, 0.1); /* opcional, só pra destacar */
+    background-color: #deb16828; /* opcional, só pra destacar */
     padding: 1rem;
     border-radius: 8px;
     color: #FFF6D2;
@@ -51,13 +50,43 @@ body{
 h3{
   font-size: 32px;   
   color: #97292C;
+  margin: 0.5rem;
 }
 .titulo{
     color: #FFF6D2;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #E46715;
 }
-    </style>
+#reserva-delivery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+}
+#reserva{
+    text-align: right;
+}
+#linha{
+    width: 1px;
+    height: 426px;
+    background: #E46715;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+}
+#pernil{
+    transform: rotate(-14.697deg);
+    margin-top: 2rem;
+}
+header{
+    z-index: 1;
+}
+.item-reserva-delivery{
+    display: grid;
+    margin-bottom: 2rem;
+}
+</style>
 </head>
 <body>
     <center>
@@ -78,7 +107,6 @@ h3{
             </div>
         </center>
     </header>
-    
     <main>
         <div class="painel"></div>
         <div class="true-main"> 
@@ -89,38 +117,42 @@ h3{
                         <div class="imagem-container">
                             <img src="/front/css/Fotos/picanha.png" alt="" class="imagemprodutospopulares" />
                         </div>
-                        <h2>Picanha</h2>
+                        <h2 class="nome-produto">Picanha</h2>
                         <p>Suculenta e cheia de sabores, é o carro chefe dos pedidos</p>
                     </div>
                     <div class="produtocontainer">
                         <div class="imagem-container">
                             <img src="/front/css/Fotos/costela.png" alt="" class="imagemprodutospopulares"/>
                         </div>
-                            <h2>Costela</h2>
+                            <h2 class="nome-produto">Costela</h2>
                             <p>Acompanhada de molho barbecue e preparada com temperos especiais.</p>
                     </div>
                     <div class="produtocontainer">
                         <div class="imagem-container">
                             <img src="/front/css/Fotos/alcatra.png" alt="" class="imagemprodutospopulares"/>
                         </div>
-                            <h2>Alcatra</h2>
+                            <h2 class="nome-produto">Alcatra</h2>
                                 <p>Feita com temperos que realçam o sabor da carne.</p>
                     </div>
                 </div>
                 </div>
-            <div id="reserva/delivery">
+            <div id="reserva-delivery">
+            <div id="reserva" class="item-reserva-delivery">
                 <h3 class="titulo">Reserva</h3>
-                <h3>Deseja realizar  uma reserva?</h3>
+                <h3>Deseja realizar uma reserva?</h3>
                 <h3>Clique <a href="reserva.html" target="_blank" style="color: #FFF6D2;">aqui</a> e faça uma!</h3>
-            
-                <h3 class="titulo">Delivery</h3>
+                <img src="/front/css/Fotos/pernil.png" id="pernil">
+            </div>
+            <div id="linha"></div>
+            <div id="delivery" class="item-reserva-delivery">
+                <img src="/front/css/Fotos/logo_delivery.png" alt="">
+                <h3 class="titulo" class="item-reserva-delivery">Delivery</h3>
                 <h3>Peça <a href="delivery.html" target="_blank" style="color: #FFF6D2;">aqui</a> o seu pedido!</h3>
                 <h3>Entrega rápida + seu pedido chega quentinho!</h3>
             </div>
+            </div>
         </div>
     </main>
-
-
     <footer>
         <div id="footerdiv">
             <div id="jacintodiv">
