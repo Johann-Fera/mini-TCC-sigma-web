@@ -11,7 +11,6 @@ body{
     font-weight: 400;
 }
 #produtospopulares {
-    background-image: url(/front/css/Fotos/Rectangle9.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: #97292C;
@@ -21,31 +20,29 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-.imagemprodutospopulares{
-    height: 30%;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    flex-wrap: wrap; /* Permite que quebrem linha se necessário */
-    gap: 10px; /* Espaçamento entre os ícones (opcional) */
-    width: 100%;
-    margin-top: 1rem;
+    min-height: 60vh;
 }
 .produtos-grid {
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    max-width: 1200px;
 }
 .produtocontainer {
-    background-color: #deb16828; /* opcional, só pra destacar */
+    background-color: #F9D5A8;
     padding: 1rem;
-    border-radius: 8px;
-    color: #FFF6D2;
-    width: 250px;
+    border-radius: 0.5rem;
+    color: #F9D5A8;
     box-sizing: border-box;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #97292C;
+    width: 20vw;
+}
+.imagem-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-radius: 0.5rem;
 }
 h3{
   font-size: 32px;   
@@ -54,8 +51,17 @@ h3{
 }
 .titulo{
     color: #FFF6D2;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #E46715;
+    font-family: "Alfa Slab One", serif;
+    font-weight: normal;
+    text-shadow:
+    -2px -2px 0 #E46715,
+    2px -2px 0 #E46715,
+    -2px 2px 0 #E46715,
+    2px 2px 0 #E46715,
+    -2px 0px 0 #E46715,
+    2px 0px 0 #E46715,
+    0px -2px 0 #E46715,
+    0px 2px 0 #E46715;
 }
 #reserva-delivery{
     display: flex;
@@ -86,6 +92,13 @@ header{
     display: grid;
     margin-bottom: 2rem;
 }
+.nome-produto{
+    color: #97292C;
+    font-weight: 100;
+    margin: 0;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
 </style>
 </head>
 <body>
@@ -111,7 +124,8 @@ header{
         <div class="painel"></div>
         <div class="true-main"> 
             <div id="produtospopulares">
-                <h2 style="color: #FFF6D2; margin: 0;">PRODUTOS POPULARES</h2>
+                <div id="conteudoprincipalprodutospopulares"></div>
+                <h2 style="color: #F9D5A8; margin: 0; margin-bottom: 1rem;">PRODUTOS POPULARES</h2>
                 <div class="produtos-grid">
                     <div class="produtocontainer">
                         <div class="imagem-container">
