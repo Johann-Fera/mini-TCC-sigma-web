@@ -74,6 +74,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow-x: hidden;
         }
 
         .forms{
@@ -93,12 +94,49 @@
             height: 100%;
             background-color: #fff2e2;
             color: #000;
+            font-family: "Inknut Antiqua", serif;
 
         }
         #datahora{
             display: flex;
             flex-direction: row;
             gap: 10px;
+        }
+
+         .final-button1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .final-button1 button {
+            font-family: "Alfa Slab One", serif;
+            padding: 10px 100px;
+            background-color: #8B0000;
+            border: none;
+            color: #FFF6D2;
+            font-size: 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .final-button1 button:hover {
+            font-family: "Alfa Slab One", serif;
+            text-shadow:
+            -1px -1px 0 #8B0000,
+            1px -1px 0 #8B0000,
+            -1px 1px 0 #8B0000,
+            1px 1px 0 #8B0000,
+            -1px 0px 0 #8B0000,
+            1px 0px 0 #8B0000,
+            0px -1px 0 #8B0000,
+            0px 1px 0 #8B0000;
+            background-color: #a50000; /* Cor mais clara ao passar o mouse */
+            transform: scale(1.05); /* Aumenta o botão ligeiramente ao passar o mouse */
+        }
+        .final-button1 button:active {
+            transform: scale(0.95); /* Diminui o botão ligeiramente ao clicar */
+        }
+        #obs{
+            width: 100%;
         }
     </style>
 </head>
@@ -150,11 +188,13 @@
                             </div>
 
                             <div class="input-box">
-                                <input placeholder="Observação" type="text">
+                                <input placeholder="Observação" type="text" id="obs"></textarea>
                             </div>
                             
-                           <center><button type="submit" class="abota">Enviar</button></center> 
-                        </div>
+                            <div class="final-button1">
+                                <button>Finalizar</button>
+                            </div>
+                            
                     <img class="espetinho" src="css/Fotos/espetinho.png" alt="espetinho">
                     </form>
             </div>
