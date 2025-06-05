@@ -1,13 +1,12 @@
 from rest_framework import serializers
-from .models import Comida
-from .models import Pedido
+from .models import Comida, Reserva
 
 class ComidaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comida
         fields = '__all__'  
 
-class PedidoSerializer(serializers.ModelSerializer):
+class ReservaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Pedido
+        model = Reserva
         fields = '__all__'
