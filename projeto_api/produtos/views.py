@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import generics
-from .models import Comida, Reserva
-from .serializers import ComidaSerializer, ReservaSerializer
+from .models import Comida, Reserva, Delivery
+from .serializers import ComidaSerializer, ReservaSerializer, DeliverySerializer
 
 class ComidaList(generics.ListCreateAPIView):
     queryset = Comida.objects.all()
@@ -16,3 +16,10 @@ class ReservaList(generics.ListCreateAPIView):
 class ReservaDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Reserva.objects.all()
     serializer_class = ReservaSerializer
+
+class DeliveryList(generics.ListCreateAPIView):
+    queryset = Delivery.objects.all()
+    serializer_class = DeliverySerializer
+class DeliveryDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Delivery.objects.all()
+    serializer_class = DeliverySerializer
