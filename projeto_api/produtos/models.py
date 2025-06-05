@@ -13,8 +13,8 @@ class Reserva(models.Model):
     nome = models.CharField(max_length=100)
     telefone = models.CharField(max_length=20)
     email = models.EmailField()
-    dia = models.DateField(auto_now_add=True)
-    hora = models.TimeField(auto_now_add=True)
+    dia = models.DateField()
+    hora = models.TimeField()
     pessoas = models.PositiveIntegerField()
     obs = models.TextField()
 
