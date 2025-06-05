@@ -177,7 +177,6 @@
             font-family: "Alfa Slab One", serif;
             padding: 10px 100px;
             background-color: #8B0000;
-            border: none;
             color: #FFF6D2;
             font-size: 25px;
             border-radius: 5px;
@@ -375,18 +374,18 @@
             <div class="total-value"><h3>Forma de Pagamento</h3></div>
                 <div class="payment-columns">
                     <div class="payment-column">
-                        <button class="payment-button" aria-label="Boleto">
+                        <button class="payment-button" aria-label="Boleto" id="bboleto" onclick="selecionar(1)">
                             <img src="/front/css/Fotos/boleto.png" alt="Boleto" />
                         </button>
-                        <button class="payment-button" aria-label="Dinheiro">
+                        <button class="payment-button" aria-label="Dinheiro" id="bdinheiro" onclick="selecionar(2)">
                             <img src="/front/css/Fotos/dinheiro.png" alt="Dinheiro" />
                         </button>
                     </div>
                     <div class="payment-column">
-                        <button class="payment-button" aria-label="Cartão">
+                        <button class="payment-button" aria-label="Cartão" id="bcartao" onclick="selecionar(3)">
                             <img src="/front/css/Fotos/cartao.png" alt="Cartão" />
                         </button>
-                        <button class="payment-button" aria-label="Pix">
+                        <button class="payment-button" aria-label="Pix" id="bpix" onclick="selecionar(4)">
                             <img src="/front/css/Fotos/pix.png" alt="Pix" />
                         </button>
                         </div>
@@ -452,6 +451,38 @@
             }
 
             document.getElementById('valor-total').innerText = total.toFixed(2);
+        }
+        function selecionar(selecionado){
+            boleto = document.getElementById("bboleto")
+            dinheiro = document.getElementById("bdinheiro")
+            cartao = document.getElementById("bcartao")
+            pix = document.getElementById("bpix")
+            if (selecionado == 1){
+                boleto.style.border = "solid"
+                dinheiro.style.border = "none"
+                cartao.style.border = "none"
+                pix.style.border = "none"
+
+            }else if(selecionado == 2){
+                boleto.style.border = "none"
+                dinheiro.style.border = "solid"
+                cartao.style.border = "none"
+                pix.style.border = "none"
+                
+            }else if(selecionado == 3){
+                boleto.style.border = "none"
+                dinheiro.style.border = "none"
+                cartao.style.border = "solid"
+                pix.style.border = "none"
+
+            }else if(selecionado == 4){
+                boleto.style.border = "none"
+                dinheiro.style.border = "none"
+                cartao.style.border = "none"
+                pix.style.border = "solid"
+
+            }
+
         }
     </script>
 </body>
