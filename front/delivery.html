@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,50 +16,55 @@
             object-fit: contain;
             color: #97292C;
         }
+
         header {
             color: white;
             text-align: center;
             padding: 0px 0;
         }
-        .painel{
+
+        .painel {
             background-image: url(/front/css/Fotos/carneheader.png);
             height: 700px;
-            width: 100%; 
+            width: 100%;
             display: flex;
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             background-position-y: 55%;
         }
-        .titleblock{
-        display: flex;
-        justify-self: center;
-        color: #FFF6D2;
-        font-family: "Alfa Slab One", serif;
-        font-weight: normal;
-        text-shadow:
-        -2px -2px 0 #E46715,
-        2px -2px 0 #E46715,
-        -2px 2px 0 #E46715,
-        2px 2px 0 #E46715,
-        -3px 0px 0 #E46715,
-        3px 0px 0 #E46715,
-        0px -3px 0 #E46715,
-        0px 3px 0 #E46715;
-    }
-        .nome-comida{
+
+        .titleblock {
+            display: flex;
+            justify-self: center;
+            color: #FFF6D2;
+            font-family: "Alfa Slab One", serif;
+            font-weight: normal;
+            text-shadow:
+                -2px -2px 0 #E46715,
+                2px -2px 0 #E46715,
+                -2px 2px 0 #E46715,
+                2px 2px 0 #E46715,
+                -3px 0px 0 #E46715,
+                3px 0px 0 #E46715,
+                0px -3px 0 #E46715,
+                0px 3px 0 #E46715;
+        }
+
+        .nome-comida {
             color: #FFF6D2;
             text-shadow:
-            -2px -2px 0 #97292C,
-            2px -2px 0 #97292C,
-            -2px 2px 0 #97292C,
-            2px 2px 0 #97292C,
-            -3px 0px 0 #97292C,
-            3px 0px 0 #97292C,
-            0px -3px 0 #97292C,
-            0px 3px 0 #97292C;
+                -2px -2px 0 #97292C,
+                2px -2px 0 #97292C,
+                -2px 2px 0 #97292C,
+                2px 2px 0 #97292C,
+                -3px 0px 0 #97292C,
+                3px 0px 0 #97292C,
+                0px -3px 0 #97292C,
+                0px 3px 0 #97292C;
             font-weight: normal;
         }
+
         .delivery {
             background-image: url(css/Fotos/fundo2.png);
             background-repeat: repeat-y;
@@ -71,6 +77,7 @@
             border-radius: 15px;
             border: solid #97292C 1px;
         }
+
         /* Container with two vertical columns side by side */
         .menu-columns {
             display: grid;
@@ -79,33 +86,38 @@
             column-gap: 20px;
             justify-items: center;
         }
+
         .menu-item {
             display: flex;
             font-family: "Alfa Slab One", serif;
             color: #97292C;
             text-shadow:
-            -1px -1px 0 #FFF6D2,
-            1px -1px 0 #FFF6D2,
-            -1px 1px 0 #FFF6D2,
-            1px 1px 0 #FFF6D2,
-            -1px 0px 0 #FFF6D2,
-            1px 0px 0 #FFF6D2,
-            0px -1px 0 #FFF6D2,
-            0px 1px 0 #FFF6D2;
+                -1px -1px 0 #FFF6D2,
+                1px -1px 0 #FFF6D2,
+                -1px 1px 0 #FFF6D2,
+                1px 1px 0 #FFF6D2,
+                -1px 0px 0 #FFF6D2,
+                1px 0px 0 #FFF6D2,
+                0px -1px 0 #FFF6D2,
+                0px 1px 0 #FFF6D2;
             font-size: x-large;
             width: 600px;
             gap: 10px;
+            align-items: center; /* Alinha verticalmente os itens */
         }
+
         .menu-item img {
             width: 300px;
             height: 200px;
             border-radius: 15px;
         }
+
         .quantity-controls {
             display: flex;
             align-items: center;
             margin-top: 8px;
         }
+
         .quantity-controls button {
             width: 30px;
             height: 30px;
@@ -115,6 +127,7 @@
             border-radius: 30px;
             cursor: pointer;
         }
+
         .quantity-controls input {
             width: 90px;
             height: 20px;
@@ -125,19 +138,22 @@
             margin: 0 5px;
             background-color: #97292C;
         }
+
         /* Para Chrome, Safari, Opera, Edge */
         .quantity-controls input[type=number]::-webkit-inner-spin-button,
         .quantity-controls input[type=number]::-webkit-outer-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
+
         .form-selectio {
             margin-top: 20px;
             text-align: left;
             text-align: center;
             color: #97292d;
-            
+
         }
+
         .form-selectio input {
             width: 50%;
             padding: 10px;
@@ -147,6 +163,7 @@
             background-color: #FFF6D2;
             font-family: "Inknut Antiqua", serif;
         }
+
         .total-value {
             text-align: center;
             margin: 20px 0;
@@ -154,25 +171,28 @@
             font-weight: bold;
             color: #97292d;
             text-shadow:
-            -1px -1px 0 #FFF6D2,
-            1px -1px 0 #FFF6D2,
-            -1px 1px 0 #FFF6D2,
-            1px 1px 0 #FFF6D2,
-            -1px 0px 0 #FFF6D2,
-            1px 0px 0 #FFF6D2,
-            0px -1px 0 #FFF6D2,
-            0px 1px 0 #FFF6D2;
+                -1px -1px 0 #FFF6D2,
+                1px -1px 0 #FFF6D2,
+                -1px 1px 0 #FFF6D2,
+                1px 1px 0 #FFF6D2,
+                -1px 0px 0 #FFF6D2,
+                1px 0px 0 #FFF6D2,
+                0px -1px 0 #FFF6D2,
+                0px 1px 0 #FFF6D2;
         }
-        span{
+
+        span {
             background-color: #fff6d2;
             border-radius: 20px;
             display: inline-block;
             width: 100px;
         }
+
         .final-button {
             text-align: center;
             margin-top: 20px;
         }
+
         .final-button button {
             font-family: "Alfa Slab One", serif;
             padding: 10px 100px;
@@ -183,73 +203,98 @@
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
         }
+
         .final-button button:hover {
             font-family: "Alfa Slab One", serif;
             text-shadow:
-            -1px -1px 0 #8B0000,
-            1px -1px 0 #8B0000,
-            -1px 1px 0 #8B0000,
-            1px 1px 0 #8B0000,
-            -1px 0px 0 #8B0000,
-            1px 0px 0 #8B0000,
-            0px -1px 0 #8B0000,
-            0px 1px 0 #8B0000;
-            background-color: #a50000; /* Cor mais clara ao passar o mouse */
-            transform: scale(1.05); /* Aumenta o botão ligeiramente ao passar o mouse */
+                -1px -1px 0 #8B0000,
+                1px -1px 0 #8B0000,
+                -1px 1px 0 #8B0000,
+                1px 1px 0 #8B0000,
+                -1px 0px 0 #8B0000,
+                1px 0px 0 #8B0000,
+                0px -1px 0 #8B0000,
+                0px 1px 0 #8B0000;
+            background-color: #a50000;
+            /* Cor mais clara ao passar o mouse */
+            transform: scale(1.05);
+            /* Aumenta o botão ligeiramente ao passar o mouse */
         }
+
         .final-button button:active {
-            transform: scale(0.95); /* Diminui o botão ligeiramente ao clicar */
+            transform: scale(0.95);
+            /* Diminui o botão ligeiramente ao clicar */
         }
+
         /* Payment section - two vertical columns side by side */
         .payment-columns {
             display: flex;
             justify-content: center;
             gap: 80px;
             margin-top: 15px;
-            flex-wrap: nowrap; /* keep columns side by side */
+            flex-wrap: nowrap;
+            /* keep columns side by side */
         }
+
         .payment-column {
             display: flex;
             flex-direction: column;
             gap: 20px;
             align-items: center;
         }
+
         .payment-column img {
             width: 80px;
             height: auto;
         }
+
         .payment-column span {
             display: block;
             margin-top: 5px;
             font-weight: bold;
             color: #8B0000;
         }
+
         .payment-button {
-            background-color: #fff6d2; /* Cor de fundo igual ao da seção de delivery */
+            background-color: #fff6d2;
+            /* Cor de fundo igual ao da seção de delivery */
             border: none;
             border-radius: 40px;
             cursor: pointer;
-            padding: 15px; /* Ajuste o tamanho do botão aqui */
+            padding: 15px;
+            /* Ajuste o tamanho do botão aqui */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px; /* Tamanho da fonte */
-            color: #333; /* Cor do texto */
-            transition: background-color 0.3s ease, transform 0.2s ease; /* Efeitos de transição */
+            font-size: 16px;
+            /* Tamanho da fonte */
+            color: #333;
+            /* Cor do texto */
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            /* Efeitos de transição */
         }
+
         .payment-button:hover {
-            background-color: #ffe0a1; /* Cor de fundo ao passar o mouse */
-            transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+            background-color: #ffe0a1;
+            /* Cor de fundo ao passar o mouse */
+            transform: scale(1.05);
+            /* Efeito de aumento ao passar o mouse */
         }
+
         .payment-button:active {
-            transform: scale(0.95); /* Efeito de redução ao clicar */
+            transform: scale(0.95);
+            /* Efeito de redução ao clicar */
         }
+
         .payment-button img {
-            width: 150px; /* Ajuste o tamanho da imagem do botão aqui */
+            width: 150px;
+            /* Ajuste o tamanho da imagem do botão aqui */
             height: 50px;
             object-fit: contain;
-            margin-right: 5px; /* Espaçamento entre a imagem e o texto */
+            margin-right: 5px;
+            /* Espaçamento entre a imagem e o texto */
         }
+
         .payment-column span {
             display: block;
             margin-top: 5px;
@@ -258,6 +303,7 @@
         }
     </style>
 </head>
+
 <body>
     <center>
         <div class="jacinto_letreiro">
@@ -279,99 +325,28 @@
     <main>
         <div class="delivery">
             <h1 class="titleblock">DELIVERY</h1>
-            <div class="menu-columns">
-                    <div class="menu-item">
-                        <img src="/front/css/Fotos/fraldinha.png" alt="Fraldinha" />
-                        <div>
-                            <h3 class="nome-comida">Fraldinha</h3> 
-                            <h3>R$35,00</h3>
-                            <div class="quantity-controls">
-                                <button onclick="decreaseQuantity('fraldinha')">-</button>
-                                <input type="number" id="fraldinha" value="0" min="0" />
-                                <button onclick="increaseQuantity('fraldinha')">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <img src="/front/css/Fotos/alcatra.png" alt="Alcatra" />
-                        <div>
-                            <h3 class="nome-comida">Alcatra</h3>
-                            <h3>R$30,00</h3>
-                            <div class="quantity-controls">
-                                <button onclick="decreaseQuantity('alcatra')">-</button>
-                                <input type="number" id="alcatra" value="0" min="0" />
-                                <button onclick="increaseQuantity('alcatra')">+</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <img src="/front/css/Fotos/picanha.png" alt="Picanha" />
-                        <div>
-                            <h3 class="nome-comida">Picanha</h3>
-                            <h3>R$50,00</h3>
-                            <div class="quantity-controls">
-                                <button onclick="decreaseQuantity('picanha')">-</button>
-                                <input type="number" id="picanha" value="0" min="0" />
-                                <button onclick="increaseQuantity('picanha')">+</button>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <img src="/front/css/Fotos/linguiça.png" alt="Linguiça" />
-                        <div>
-                            <h3 class="nome-comida">Linguiça</h3>
-                            <h3>$25,00</h3>
-                            <div class="quantity-controls">
-                                <button onclick="decreaseQuantity('linguiça')">-</button>
-                                <input type="number" id="linguiça" value="0" min="0" />
-                                <button onclick="increaseQuantity('linguiça')">+</button>
-                            </div>     
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <img src="/front/css/Fotos/costela.png" alt="Costela" />
-                        <div>
-                            <h3 class="nome-comida">Costela</h3>
-                            <h3>$40,00</h3>
-                            <div class="quantity-controls">
-                                <button onclick="decreaseQuantity('costela')">-</button>
-                                <input type="number" id="costela" value="0" min="0" />
-                                <button onclick="increaseQuantity('costela')">+</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <img src="/front/css/Fotos/pão_de_alho.png" alt="Pão de Alho" />
-                        <div>
-                            <h3 class="nome-comida">Pão de Alho</h3>
-                            <h3>$10,00</h3>
-                            <div class="quantity-controls">
-                                <button onclick="decreaseQuantity('pão_de_alho')">-</button>
-                                <input type="number" id="pão_de_alho" value="0" min="0" />
-                                <button onclick="increaseQuantity('pão_de_alho')">+</button>
-                            </div>
-
-                        </div>
-                    </div>
+            <div class="menu-columns" id="ultragrid">
             </div>
 
             <div class="total-value">
                 <h3>Valor: R$ <span id="valor-total">0.00</span></h3>
             </div>
-            
-            <div class="form-selectio">
-            <center>
-                <div class="total-value"><h3>Informações do pedido</h3></div>
-                <input type="text" placeholder="Nome Completo" />
-                <input type="number" placeholder="Telefone" />
-                <input type="text" placeholder="Email" />
-                <input type="text" placeholder="Endereço" />
-                <input type="text" placeholder="Complemento" />
-            </center>
 
-            <div class="total-value"><h3>Forma de Pagamento</h3></div>
+            <div class="form-selectio">
+                <center>
+                    <div class="total-value">
+                        <h3>Informações do pedido</h3>
+                    </div>
+                    <input type="text" placeholder="Nome Completo" />
+                    <input type="number" placeholder="Telefone" />
+                    <input type="text" placeholder="Email" />
+                    <input type="text" placeholder="Endereço" />
+                    <input type="text" placeholder="Complemento" />
+                </center>
+
+                <div class="total-value">
+                    <h3>Forma de Pagamento</h3>
+                </div>
                 <div class="payment-columns">
                     <div class="payment-column">
                         <button class="payment-button" aria-label="Boleto" id="bboleto" onclick="selecionar(1)">
@@ -388,21 +363,21 @@
                         <button class="payment-button" aria-label="Pix" id="bpix" onclick="selecionar(4)">
                             <img src="/front/css/Fotos/pix.png" alt="Pix" />
                         </button>
-                        </div>
                     </div>
                 </div>
-
-                <div class="final-button">
-                    <button>Finalizar</button>
-                </div>
             </div>
+
+            <div class="final-button">
+                <button>Finalizar</button>
+            </div>
+        </div>
         </div>
     </main>
     <footer>
         <div id="footerdiv">
             <div id="jacintodiv">
                 <img src="/front/css/Fotos/Jacinto logo.png" alt="" id="jacinto_logo">
-            </div>    
+            </div>
             <div id="localiza-contato-horario">
                 <p>Praça Roberto Mange, 30 - Santa Rosália - Sorocaba/SP, 18090-110</p>
                 <p>Segunda a Sexta 11:00-22:00 / Sábado e Domingo 11:00-23:00</p>
@@ -412,14 +387,43 @@
                 <img src="/front/css/Fotos/Instagram.png" alt="logo_insta" class="icones">
                 <img src="/front/css/Fotos/twitter.png" alt="logo_X" class="icones">
                 <img src="/front/css/Fotos/Icon localização.png" alt="logo_gps" class="icones">
-                <img src="/front/css/Fotos/Zap.png" alt="logo_zap" class="icones">       
+                <img src="/front/css/Fotos/Zap.png" alt="logo_zap" class="icones">
                 <img src="/front/css/Fotos/sigma logo.png" alt="sigma_web" class="icones">
             </div>
             <p id="copyrightsigmaweb">&#169 Site por SIGMA WEB</p>
         </div>
-     </footer>
-    
+    </footer>
+
     <script>
+        function fetchprodutos() {
+            fetch("http://127.0.0.1:8000/api/comidas/")
+                .then(res => res.json())
+                .then(data => rendercomidas(data))
+                .catch(err => console.error("erro ao buscar", err));
+        }
+
+        function rendercomidas(comidas) {
+            const container = document.getElementById("ultragrid");
+            container.innerHTML = "";
+            comidas.forEach(comida => {
+                const card = document.createElement("div");
+                card.className = "menu-item";
+                card.innerHTML = `
+                    <img src="${comida.imagem}" alt="${comida.nome}" />
+                    <div>
+                        <h3 class="nome-comida">${comida.nome}</h3>
+                        <h3 data-preco="${comida.preco}">${comida.preco}</h3>
+                        <div class="quantity-controls">
+                            <button onclick="decreaseQuantity('${comida.id}')">-</button>
+                            <input type="number" id="${comida.id}" value="0" min="0" />
+                            <button onclick="increaseQuantity('${comida.id}')">+</button>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
         function increaseQuantity(item) {
             let input = document.getElementById(item);
             input.value = parseInt(input.value) + 1;
@@ -436,46 +440,45 @@
 
         function updateTotal() {
             let total = 0;
-            const prices = {
-                'fraldinha': 35,
-                'alcatra': 30,
-                'picanha': 50,
-                'linguiça': 25,
-                'costela': 40,
-                'pão_de_alho': 10,
-            };
+            const container = document.getElementById("ultragrid");
+            const items = container.getElementsByClassName("menu-item");
 
-            for (const item in prices) {
-                const quantity = document.getElementById(item).value;
-                total += prices[item] * quantity;
+            for (let i = 0; i < items.length; i++) {
+                const item = items[i];
+                const itemId = item.querySelector('input[type="number"]').id;
+                const quantity = parseInt(document.getElementById(itemId).value);
+                const price = parseFloat(item.querySelector('h3[data-preco]').dataset.preco);
+
+                total += quantity * price;
             }
 
-            document.getElementById('valor-total').innerText = total.toFixed(2);
+            document.getElementById("valor-total").innerText = total.toFixed(2);
         }
-        function selecionar(selecionado){
+
+        function selecionar(selecionado) {
             boleto = document.getElementById("bboleto")
             dinheiro = document.getElementById("bdinheiro")
             cartao = document.getElementById("bcartao")
             pix = document.getElementById("bpix")
-            if (selecionado == 1){
+            if (selecionado == 1) {
                 boleto.style.border = "solid"
                 dinheiro.style.border = "none"
                 cartao.style.border = "none"
                 pix.style.border = "none"
 
-            }else if(selecionado == 2){
+            } else if (selecionado == 2) {
                 boleto.style.border = "none"
                 dinheiro.style.border = "solid"
                 cartao.style.border = "none"
                 pix.style.border = "none"
-                
-            }else if(selecionado == 3){
+
+            } else if (selecionado == 3) {
                 boleto.style.border = "none"
                 dinheiro.style.border = "none"
                 cartao.style.border = "solid"
                 pix.style.border = "none"
 
-            }else if(selecionado == 4){
+            } else if (selecionado == 4) {
                 boleto.style.border = "none"
                 dinheiro.style.border = "none"
                 cartao.style.border = "none"
@@ -484,6 +487,9 @@
             }
 
         }
+
+        window.onload = fetchprodutos;
     </script>
 </body>
+
 </html>
