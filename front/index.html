@@ -27,7 +27,20 @@ body{
     gap: 1.5rem;
     justify-content: center;
     width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 1200px;
+    padding: 10px 0;
+
+    /* Oculta a barra de rolagem */
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE e Edge antigos */
 }
+
+.produtos-grid::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari e Edge */
+  }
+
 .produtocontainer {
     background-color: #F9D5A8;
     padding: 1rem;
@@ -97,6 +110,25 @@ header{
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
 }
+.carrossel-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.seta {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+  }
+  
+  .seta:hover {
+    background-color: #e0e0e0;
+  }
 </style>
 </head>
 <body>
@@ -122,37 +154,13 @@ header{
         <div class="painel"></div>
         <div class="true-main"> 
             <div id="produtospopulares">
-                <div id="conteudoprincipalprodutospopulares"></div>
-                <h2 style="color: #97292C; margin: 0; margin-bottom: 1rem; 
-                background-color: #f9d4a8;
-                padding: 10px;
-                border:solid;
-                border-radius: 16px;
-                font-weight: 100;">PRODUTOS POPULARES</h2>
-                <div class="produtos-grid">
-                    <div class="produtocontainer">
-                        <div class="imagem-container">
-                            <img src="/front/css/Fotos/picanha.png" alt="" class="imagemprodutospopulares" />
-                        </div>
-                        <h2 class="nome-produto">Picanha</h2>
-                        <p>Suculenta e cheia de sabores, é o carro chefe dos pedidos</p>
-                    </div>
-                    <div class="produtocontainer">
-                        <div class="imagem-container">
-                            <img src="/front/css/Fotos/costela.png" alt="" class="imagemprodutospopulares"/>
-                        </div>
-                            <h2 class="nome-produto">Costela</h2>
-                            <p>Acompanhada de molho barbecue e preparada com temperos especiais.</p>
-                    </div>
-                    <div class="produtocontainer">
-                        <div class="imagem-container">
-                            <img src="/front/css/Fotos/alcatra.png" alt="" class="imagemprodutospopulares"/>
-                        </div>
-                            <h2 class="nome-produto">Alcatra</h2>
-                                <p>Feita com temperos que realçam o sabor da carne.</p>
-                    </div>
+                <h2 style="color: #97292C; margin: 0; margin-bottom: 1rem;background-color: #f9d4a8; padding: 10px; border:solid; border-radius: 16px;font-weight: 100;">PRODUTOS POPULARES</h2>
+                <div class="carrossel-area">
+                    <button class="seta esquerda" id="seta-esquerda">&#10094;</button>
+                    <div class="produtos-grid" id="produtos-grid"></div>
+                    <button class="seta direita" id="seta-direita">&#10095;</button>
                 </div>
-                </div>
+            </div>
             <div id="reserva-delivery">
             <div id="reserva" class="item-reserva-delivery">
                 <h3 class="titulo">Reserva</h3>
@@ -190,5 +198,45 @@ header{
             <p id="copyrightsigmaweb">&#169 Site por SIGMA WEB</p>
         </div>
      </footer>
+     <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            fetchprodutos()
+        });
+        function fetchprodutos() {
+            fetch("http://127.0.0.1:8000/api/comidas/")
+            .then (res => res.json())
+            .then (data => rendercomidas(data))
+            .catch (err => console.error("erro ao buscar", err))
+        }
+        function rendercomidas(comidas){
+            const container = document.getElementById("produtos-grid");
+            container.innerHTML = "";
+            comidas.forEach(comida => {
+                const card = document.createElement("div");
+                card.className = "produtocontainer";
+                card.innerHTML = `
+                        <div class="imagem-container">
+                            <img src="${comida.imagem}" alt="" class="imagemprodutospopulares" />
+                        </div>
+                        <h2 class="nome-produto">${comida.nome}</h2>
+                        <p>${comida.descricao}</p>
+                `;
+                container.appendChild(card)
+            });
+        }
+        document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".produtos-grid");
+    const esquerda = document.getElementById("seta-esquerda");
+    const direita = document.getElementById("seta-direita");
+  
+    esquerda.addEventListener("click", () => {
+      container.scrollBy({ left: -300, behavior: "smooth" });
+    });
+  
+    direita.addEventListener("click", () => {
+      container.scrollBy({ left: 300, behavior: "smooth" });
+    });
+  });
+     </script>
     </body>
  </html>
