@@ -60,7 +60,6 @@
         }
         
         .true-main{
-            display: flex;
             align-items: center;
             justify-content: center;
             overflow-x: hidden;
@@ -153,39 +152,32 @@
         <div class="true-main"> 
             <div class="broco"> 
                 <h1 class="titleblock">Reserva</h1>
-                    <form>
-                        <div class="forms">
-                            <div class="input-box">
-                                <input placeholder="Nome Completo" type="text">
-                            </div>
-
-                            <div class="input-box">
-                                <input placeholder="Telefone" type="number">
-                            </div>
-
-                            <div class="input-box">
-                                <input placeholder="Email" type="email">
-                            </div>
-
-                            <div class="input-box" id="datahora">
-                                <input placeholder="Dia" type="date">
-                                <input placeholder="Horário" type="time">
-                            </div>
-
-                            <div class="input-box">
-                                <input placeholder="Quantidade de Pessoas" type="number">
-                            </div>
-
-                            <div class="input-box">
-                                <input placeholder="Observação" type="text" id="obs"></textarea>
-                            </div>
-                            
-                            <div class="final-button1">
-                                <button>Finalizar</button>
-                            </div>
-                            
-                    <img class="espetinho" src="css/Fotos/espetinho.png" alt="espetinho">
-                    </form>
+                <form>
+                    <div class="forms">
+                        <div class="input-box">
+                            <input placeholder="Nome Completo" type="text" id="algum">
+                        </div>
+                        <div class="input-box">
+                            <input placeholder="Telefone" type="number">
+                        </div>
+                        <div class="input-box">
+                            <input placeholder="Email" type="email">
+                        </div>
+                        <div class="input-box" id="datahora">
+                            <input placeholder="Dia" type="date">
+                            <input placeholder="Horário" type="time">
+                        </div>
+                        <div class="input-box">
+                            <input placeholder="Quantidade de Pessoas" type="number">
+                        </div>
+                        <div class="input-box">
+                            <input placeholder="Observação" type="text" id="obs"></textarea>
+                        </div>
+                    </div>
+                </form>
+                <div class="final-button1">
+                    <button onclick="loog()">Finalizar</button>
+                </div>
             </div>
         </div>
     </main>
@@ -209,6 +201,10 @@
             <p id="copyrightsigmaweb">&#169 Site por SIGMA WEB</p>
         </div>
      </footer>
+    <script>
+        function loog(){
+            console.log(document.getElementById("algum").value)
+        }
     </script>
 </body>
 </html> 
