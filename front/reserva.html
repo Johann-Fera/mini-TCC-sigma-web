@@ -155,23 +155,23 @@
                 <form>
                     <div class="forms">
                         <div class="input-box">
-                            <input placeholder="Nome Completo" type="text" id="algum">
+                            <input placeholder="Nome Completo" type="text" id="nome">
                         </div>
                         <div class="input-box">
-                            <input placeholder="Telefone" type="number">
+                            <input placeholder="Telefone" type="number" id="telefone">
                         </div>
                         <div class="input-box">
-                            <input placeholder="Email" type="email">
+                            <input placeholder="Email" type="email" id ="email">
                         </div>
                         <div class="input-box" id="datahora">
-                            <input placeholder="Dia" type="date">
-                            <input placeholder="Horário" type="time">
+                            <input placeholder="Dia" type="date" id = "data">
+                            <input placeholder="Horário" type="time" id="hora">
                         </div>
                         <div class="input-box">
-                            <input placeholder="Quantidade de Pessoas" type="number">
+                            <input placeholder="Quantidade de Pessoas" type="number" id="quantidade">
                         </div>
                         <div class="input-box">
-                            <input placeholder="Observação" type="text" id="obs"></textarea>
+                            <input placeholder="Observação" type="text" id="obs"></textarea id="obs">
                         </div>
                     </div>
                 </form>
@@ -203,7 +203,14 @@
      </footer>
     <script>
         function loog(){
-            console.log(document.getElementById("algum").value)
+            console.log("Nome: ",document.getElementById("nome").value)
+            console.log("Telefone: ",document.getElementById("telefone").value)
+            console.log("Email: ",document.getElementById("email").value)
+            console.log("Data: ",document.getElementById("data").value)
+            console.log("Horário: ",document.getElementById("hora").value)
+            console.log("Quantidade de Pessoas: ",document.getElementById("quantidade").value)
+            console.log("Observação: ",document.getElementById("obs").value)
+
         }
     </script>
 </body>
