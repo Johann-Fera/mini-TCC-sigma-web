@@ -13,7 +13,7 @@
             margin: 0;
             background-image: url("css/Fotos/fundo.png");
             background-size: 150%;
-            background-repeat: no-repeat;
+            background-repeat: repeat-y;
             object-fit: contain;
             color: #97292C;
         }
@@ -161,7 +161,7 @@
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 18px;
-            background-color: #FFF6D2;
+            background-color: #ffffff;
             font-family: "Inknut Antiqua", serif;
         }
 
@@ -203,6 +203,7 @@
             border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
         }
 
         .final-button button:hover {
@@ -257,7 +258,7 @@
         }
 
         .payment-button {
-            background-color: #fff6d2;
+            background-color: #fff1df;
             /* Cor de fundo igual ao da seção de delivery */
             border: none;
             border-radius: 40px;
@@ -276,7 +277,7 @@
         }
 
         .payment-button:hover {
-            background-color: #ffe0a1;
+            background-color: #ffbe68;
             /* Cor de fundo ao passar o mouse */
             transform: scale(1.05);
             /* Efeito de aumento ao passar o mouse */
@@ -301,6 +302,10 @@
             margin-top: 5px;
             font-weight: bold;
             color: #8B0000;
+        }
+         /* Estilização para destaque do método selecionado */
+        .payment-button.selected {
+            border: 2px solid #8B0000;
         }
     </style>
 </head>
@@ -332,44 +337,44 @@
             <div class="total-value">
                 <h3>Valor: R$ <span id="valor-total">0.00</span></h3>
             </div>
-
+            
             <div class="form-selectio">
                 <center>
                     <div class="total-value">
                         <h3>Informações do pedido</h3>
                     </div>
-                    <input type="text" placeholder="Nome Completo" />
-                    <input type="number" placeholder="Telefone" />
-                    <input type="text" placeholder="Email" />
-                    <input type="text" placeholder="Endereço" />
-                    <input type="text" placeholder="Complemento" />
+                    <input type="text" placeholder="Nome Completo" id="nome" />
+                    <input type="number" placeholder="Telefone" id="telefone" />
+                    <input type="text" placeholder="Email" id="email" />
+                    <input type="text" placeholder="Endereço" id="endereco" />
+                    <input type="text" placeholder="Complemento" id="complemento" />
                 </center>
-
+            
                 <div class="total-value">
                     <h3>Forma de Pagamento</h3>
                 </div>
                 <div class="payment-columns">
                     <div class="payment-column">
-                        <button class="payment-button" aria-label="Boleto" id="bboleto" onclick="selecionar(1)">
+                        <button class="payment-button" aria-label="Boleto" id="bboleto" onclick="selecionarMetodo('bboleto')">
                             <img src="/front/css/Fotos/boleto.png" alt="Boleto" />
                         </button>
-                        <button class="payment-button" aria-label="Dinheiro" id="bdinheiro" onclick="selecionar(2)">
+                        <button class="payment-button" aria-label="Dinheiro" id="bdinheiro" onclick="selecionarMetodo('bdinheiro')">
                             <img src="/front/css/Fotos/dinheiro.png" alt="Dinheiro" />
                         </button>
                     </div>
                     <div class="payment-column">
-                        <button class="payment-button" aria-label="Cartão" id="bcartao" onclick="selecionar(3)">
+                        <button class="payment-button" aria-label="Cartão" id="bcartao" onclick="selecionarMetodo('bcartao')">
                             <img src="/front/css/Fotos/cartao.png" alt="Cartão" />
                         </button>
-                        <button class="payment-button" aria-label="Pix" id="bpix" onclick="selecionar(4)">
+                        <button class="payment-button" aria-label="Pix" id="bpix" onclick="selecionarMetodo('bpix')">
                             <img src="/front/css/Fotos/pix.png" alt="Pix" />
                         </button>
                     </div>
                 </div>
             </div>
-
+            
             <div class="final-button">
-                <button>Finalizar</button>
+                <button id="finalizar">Finalizar</button>
             </div>
         </div>
         </div>
@@ -396,6 +401,51 @@
     </footer>
 
     <script>
+        // Variável para guardar o método de pagamento selecionado
+        let metodoPagamentoEscolhido = '';
+
+        // Função para marcar o método selecionado
+        function selecionarMetodo(metodo) {
+           document.querySelectorAll('.payment-button').forEach(btn => btn.classList.remove('selected'));
+           const btnSelecionado = document.getElementById(metodo);
+           btnSelecionado.classList.add('selected');
+           metodoPagamentoEscolhido = metodo;
+        }
+
+        // Evento para o botão Finalizar
+        document.getElementById('finalizar').addEventListener('click', function() {
+            // Pegando os valores dos inputs
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const endereco = document.getElementById('endereco').value;
+            const complemento = document.getElementById('complemento').value;
+
+            // Pegando o valor total
+            const valorTotal = document.getElementById('valor-total').innerText;
+
+            // Opções de pagamento
+            const metodoPagamento = (() => {
+                switch(metodoPagamentoEscolhido) {
+                    case 'bboleto': return 'Boleto';
+                    case 'bdinheiro': return 'Dinheiro';
+                    case 'bcartao': return 'Cartão';
+                    case 'bpix': return 'Pix';
+                    default: return 'Não selecionado';
+                }
+            })();
+
+            // Exibir as informações no console
+            console.log('--- Dados do Pedido ---');
+            console.log('Nome:', nome);
+            console.log('Telefone:', telefone);
+            console.log('Email:', email);
+            console.log('Endereço:', endereco);
+            console.log('Complemento:', complemento);
+            console.log('Valor Total:', valorTotal);
+            console.log('Forma de Pagamento:', metodoPagamento);
+        });
+
         function fetchprodutos() {
             fetch("http://127.0.0.1:8000/api/comidas/")
                 .then(res => res.json())
