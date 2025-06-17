@@ -30,7 +30,6 @@
             justify-content: flex-start;
             width: 100%;
             overflow-x: auto;
-            scroll-behavior: smooth;
             width: 1200px;
             padding: 10px 0;
         
@@ -235,22 +234,28 @@
     function rendercomidas(comidas) {
         const container = document.getElementById("produtos-grid");
         container.innerHTML = "";
+        let carrosseltam = 0
+        for (let index = 0; index < 3; index++) {
+            comidas.forEach(comida => {
+                if(!comida.popular) return;
+                if (index == 2) {
+                    carrosseltam = carrosseltam + 1
+                }
+                const card = document.createElement("div");
+                card.className = "produtocontainer";
+                card.innerHTML = `
+                    <div class="imagem-container">
+                        <img src="${comida.imagem}" alt="${comida.nome}" class="imagemprodutospopulares" />
+                    </div>
+                    <h2 class="nome-produto">${comida.nome}</h2>
+                    <p>${comida.descricao}</p>
+                `;
+                container.appendChild(card);
+            });
 
-        comidas.forEach(comida => {
-            if(!comida.popular) return;
-            const card = document.createElement("div");
-            card.className = "produtocontainer";
-            card.innerHTML = `
-                <div class="imagem-container">
-                    <img src="${comida.imagem}" alt="${comida.nome}" class="imagemprodutospopulares" />
-                </div>
-                <h2 class="nome-produto">${comida.nome}</h2>
-                <p>${comida.descricao}</p>
-            `;
-            container.appendChild(card);
-        });
+        }
 
-        iniciarCarrosselComVolta(container, comidas.length);
+        iniciarCarrosselComVolta(container, carrosseltam);
     }
 
     function iniciarCarrosselComVolta(container, totalItens) {
@@ -258,22 +263,36 @@
         const esquerda = document.getElementById("seta-esquerda");
         const direita = document.getElementById("seta-direita");
 
-        let indexAtual = 0;
+        let indexAtual = totalItens;
+        let indexincial = totalItens;
+        let indexfinal = totalItens - 1;
+        container.scrollTo({ left: indexAtual * itemWidth, behavior: "auto"});
+
 
         esquerda.addEventListener("click", () => {
+            container.scrollTo({ left: indexAtual * itemWidth, behavior: "auto"});
             indexAtual--;
-            if (indexAtual < 0) {
-                indexAtual = totalItens - 1;
+            if (indexAtual < totalItens - 1) {
+                container.scrollTo({ left: indexAtual * itemWidth, behavior: "smooth"});
+                indexAtual = (indexincial*2)-2
+
+            }else{
+                container.scrollTo({ left: indexAtual * itemWidth, behavior: "smooth"});
             }
-            container.scrollTo({ left: indexAtual * itemWidth, behavior: "smooth" });
         });
 
         direita.addEventListener("click", () => {
+            container.scrollTo({ left: indexAtual * itemWidth, behavior: "auto"});
+            console.log(indexAtual,"depois soma");
             indexAtual++;
-            if (indexAtual >= totalItens - 2) {
-                indexAtual = 0;
+            console.log(indexAtual,"apos soma");
+            if (indexAtual >= totalItens*2) {
+                container.scrollTo({ left: indexAtual * itemWidth, behavior: "smooth"});
+                indexAtual = indexincial;
+            }else{
+                container.scrollTo({ left: indexAtual * itemWidth, behavior: "smooth"});
             }
-            container.scrollTo({ left: indexAtual * itemWidth, behavior: "smooth" });
+            console.log(indexAtual,"depois tudo");
         });
     }
 </script>
